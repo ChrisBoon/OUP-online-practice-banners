@@ -1,0 +1,89 @@
+.container {
+    background-size: contain;
+    background-repeat: repeat;
+    background-color: #a86700;
+    background-image: url(../images/banners/triangles.png), linear-gradient(to right, #a86700 0%, #c98a03 50%, #e3ac47 100%);
+}
+
+#header > a {
+    width: 350px;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("../images/banners/logo-course-2x.png");
+}
+
+#headBtn li.disabled {
+    background: rgba(168, 103, 0, 0.8);
+}
+
+#headBtn li:hover {
+    background: rgba(168, 103, 0, 0.5);
+}
+
+.b_elm1 #header > a,
+.b_elm2 #header > a,
+.b_elm3 #header > a,
+.b_elm4 #header > a {
+    cursor: pointer;
+}
+
+.b_elm1 #header > a:hover,
+.b_elm2 #header > a:hover,
+.b_elm3 #header > a:hover,
+.b_elm4 #header > a:hover {
+    background-position: 100% 0%;
+}
+
+.b_elm1 .container {
+    background-color: #9f2115;
+    background-image: url(../images/banners/triangles.png), linear-gradient(to right, #9f2115 0%, #ea6c08 50%, #f49a3a 100%);
+}
+
+.b_elm1 #header > a {
+    background-image: url("../images/banners/logo-level-1-2x.png");
+}
+
+.b_elm1 #header #headBtn li:hover {
+    background: rgba(159, 33, 21, 0.35);
+}
+
+.b_elm2 .container {
+    background-color: #005d28;
+    background-image: url(../images/banners/triangles.png), linear-gradient(to right, #005d28 0%, #5fae2f 50%, #dada00 100%);
+}
+
+.b_elm2 #header > a {
+    background-image: url("../images/banners/logo-level-2-2x.png");
+}
+
+.b_elm2 #header #headBtn li:hover {
+    background: rgba(0, 93, 40, 0.35);
+}
+
+.b_elm3 .container {
+    background-color: #f49a3a;
+    background-image: url(../images/banners/triangles.png), linear-gradient(to right, #003b75 0%, #0099cc 50%, #00cccc 100%);
+}
+
+.b_elm3 #header > a {
+    background-image: url("../images/banners/logo-level-3-2x.png");
+}
+
+.b_elm3 #header #headBtn li:hover {
+    background: rgba(0, 59, 117, 0.35);
+}
+
+.b_elm4 .container {
+    background-color: #8615c7;
+    background-image: url(../images/banners/triangles.png), linear-gradient(to right, #8615c7 0%, #a62380 50%, #cd4ca3 100%);
+}
+
+.b_elm4 #header > a {
+    background-image: url("../images/banners/logo-level-4-2x.png");
+}
+
+.b_elm4 #header #headBtn li:hover {
+    background: rgba(85, 18, 124, 0.4);
+}
+

@@ -1,0 +1,167 @@
+//mixins and variables
+
+
+//prevents highlight of text if clicking a div or other tag that is used to perform actions
+@mixin user-select-none{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+%user-select-none{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+//prevents tap highlight on touch devices
+@mixin no-tap-color{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+%no-tap-color{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+
+//float fix
+@mixin clearfix{
+  &:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+}
+%clearfix{
+  &:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+}
+
+//to add smooth scrolling in iOS to overflow elements.
+@mixin ios-scroll{
+  -webkit-overflow-scrolling: touch;
+}
+%ios-scroll{
+  -webkit-overflow-scrolling: touch;
+}
+
+//when using bg-image to replace text
+@mixin text-replace{
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+%text-replace{
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+//for adding decorative pseudo elements
+@mixin before(){
+  position: relative;
+  &:before{
+    position: absolute;
+    display: block;
+    content: " ";
+    @content;
+  }
+}
+
+
+//switch from subpixel to full pixel smoothing in webkit - note this makes text too thin usually but can make white text on dark backgrounds look better at large sizes or bold weights
+@mixin smooth-text{
+  -webkit-font-smoothing: antialiased;
+}
+%smooth-text{
+  -webkit-font-smoothing: antialiased;
+}
+
+//hover only on .no-touch (means modernizr is required or no over states will ever appear)
+@mixin hover(){
+  .no-touch &:not(.active):hover{
+    cursor: pointer;
+    @content;
+  }
+}
+
+@mixin active(){
+  .no-touch &:not(.active):active,
+  .touch &:not(.active):active{
+    @content;
+  }
+}
+
+
+//tint - stolen from Bourbon
+@function tint($color, $percent){
+  @return mix(white, $color, $percent);
+}
+//tint - stolen from Bourbon
+@function dirty($color, $percent){
+  @return mix(black, $color, $percent);
+}
+
+//media-queries system
+$breakpoints: (
+  'tiny':   ( max-width:  767px ),
+  'small':  ( min-width:  768px ),
+  'medium': ( min-width:  992px ),
+  'large':  ( min-width: 1200px ),
+  'custom': ( min-height:  40em )
+);
+ 
+@mixin breakpoint($name) {
+      @if map-has-key($breakpoints, $name) {
+        @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+  @else {
+    @warn "Couldn't find a breakpoint named `#{$name}`.";
+  }
+}
+
+//basic transition
+@mixin transitionAll{ transition: all 0.2s;}
+
+
+
+//used to simplify writing rules for x1 and x2 sized logos
+@mixin hiRes ($filePath){
+  background-image: url(#{$filePath}-1x.png);
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){
+    background-image: url(#{$filePath}-2x.png);
+    background-size: 100%;
+  }
+}
+
+@mixin hiResManual {
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){
+    @content;
+  }
+}
+
+//z-index stuff:
+
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+  }
+ 
+  @return map-get($z-layers, $layer);
+}
+
+$z-layers: (
+  "toolbar":5,
+  "sidebar":6,
+  "modal":10,
+  "default":1,
+  "below":-1
+  );

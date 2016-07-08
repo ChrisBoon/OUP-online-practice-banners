@@ -1,0 +1,72 @@
+@import '../base/_helpers';
+
+$level:(
+  level0: #f6c035,
+  level1: #ad71a9,
+  level2: #f58020,
+  level3: #0088cb,
+  level4: #8bc751,
+  level5: #f15b67,
+  level6: #3db4a9,
+  course: #ad71a9
+);
+
+.zzz-eu2e{
+  //all elm containers:
+  .container{
+    height: 80px;
+    background-color: map-get($level, course);
+    // padding-left: 16px;
+    background-image: url('../assets/primary-eu2e/banner-course.svg');
+  }
+  #header{
+    width: 100%;
+    max-width: 768px;
+  }
+  //all elm logos
+  #header>a{
+    position: relative;
+    width: 188px;
+    background-repeat: no-repeat;
+    @include hiRes ('../assets/primary-eu2e/logo-course');
+  }
+  #headBtn{
+    margin-top: 5px;
+    height: 70px;
+  }
+  .b_eu2e0,
+  .b_eu2e1,
+  .b_eu2e2,
+  .b_eu2e3,
+  .b_eu2e4,
+  .b_eu2e5,
+  .b_eu2e6{
+
+
+    #header>a{
+      cursor: pointer;
+      transition: background-position 0.2s;
+      &:hover{
+        background-position: 0 -6px, 0 0;
+      }
+    }
+  }
+  @for $i from 0 through 6{
+    .b_eu2e#{$i}{
+      .container{
+        background-color: map-get($level, level#{$i});
+      }
+      #header>a{
+        @if $i == 0{
+          width: 223px;
+        }
+        background-image: url('../assets/primary-eu2e/logo-level-#{$i}-text-1x.png'), url('../assets/primary-eu2e/logo-level-#{$i}-cloud-1x.png');
+        @include hiResManual{
+          background-image: url('../assets/primary-eu2e/logo-level-#{$i}-text-2x.png'), url('../assets/primary-eu2e/logo-level-#{$i}-cloud-2x.png');
+        }
+
+      }
+
+    }
+  }
+}

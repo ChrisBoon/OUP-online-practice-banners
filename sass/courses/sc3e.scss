@@ -1,0 +1,83 @@
+@import '../base/_helpers';
+
+$level:(
+  level0: rgb(154,193,68),
+  level1: rgb(0,169,203),
+  level2: rgb(217,57,78),
+  level3: rgb(143,73,156),
+  course: rgb(245,130,51)
+);
+
+.zzz-sc3e{
+  //all elm containers:
+  .container{
+    background-color: map-get($level, course);
+    padding-left: 16px;
+  }
+  #header{
+    background:transparent url('../assets/adult-sc3e/banner-course-2x.png') right top no-repeat;
+    background-size: 545px;
+    width: 100%;
+    max-width: 768px;
+  }
+  //all elm logos
+  #header>a{
+    position: relative;
+    width: 267px;
+    background-position: -25px 0;
+    background-repeat: no-repeat;
+    background-size: 267px;
+    background-image: url('../assets/adult-sc3e/logo-course-2x.png');
+  }
+  #headBtn li{
+    &.disabled{
+      background: rgba( darken( map-get($level, course) ,20) ,0.8);
+    }
+    &:hover{
+      background: rgba( darken( map-get($level, course) ,20) ,0.6);
+    }
+  }
+  .b_sc3e0,
+  .b_sc3e1,
+  .b_sc3e2,
+  .b_sc3e3{
+    #header>a{
+      cursor: pointer;
+      transition: background-position 0.2s;
+      &:hover{
+        background-position: 0 0;
+      }
+    }
+  }
+  @for $i from 0 through 3{
+    .b_sc3e#{$i}{
+      .container{
+        background:linear-gradient( to right, map-get($level, course) 50%, map-get($level, level#{$i}) 50%);;
+      }
+      #header{
+        background-image: url('../assets/adult-sc3e/banner-level-#{$i}-2x.png');
+      }
+      #header>a{
+        &:after{
+          position: absolute;
+          display: block;
+          content: "";
+          left: 100%;
+          top:0;
+          height: 70px;
+          background: url('../assets/adult-sc3e/logo-level-#{$i}-2x.png');
+          background-size: 100%;
+          @if $i == 0{
+            width: 97px;     
+          }
+          @else{
+            width: 23px; 
+          }
+        }
+      }
+      #headBtn li:hover{
+        background: rgba( darken( map-get($level, level#{$i}) ,20) ,0.6);
+      }
+    }
+  }
+}

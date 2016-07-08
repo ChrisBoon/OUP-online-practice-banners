@@ -1,0 +1,195 @@
+.container {
+    height: 80px;
+}
+
+#header {
+    height: 100%;
+}
+
+#headBtn {
+    margin-top: 5px;
+}
+
+.container {
+    background-color: #008bcc;
+}
+
+#header > a {
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    width: 160px;
+    background-image: url(../images/banners/logo-course-1x.png);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    #header > a {
+        background-image: url(../images/banners/logo-course-2x.png);
+        background-size: 100%;
+    }
+}
+
+#header > a:before {
+    background-image: url("../images/banners/starburst-course.png");
+}
+
+#header > a:before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 276px;
+    height: 80px;
+    left: -69px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    opacity: 0.5;
+    transition: all 0.5s;
+    pointer-events: none;
+}
+
+.b_exp1 #header > a,
+.b_exp2 #header > a,
+.b_exp3 #header > a,
+.b_exp4 #header > a,
+.b_exp5 #header > a,
+.b_exp6 #header > a {
+    width: 190px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.b_exp1 #header > a:hover,
+.b_exp2 #header > a:hover,
+.b_exp3 #header > a:hover,
+.b_exp4 #header > a:hover,
+.b_exp5 #header > a:hover,
+.b_exp6 #header > a:hover {
+    -webkit-filter: saturate(2);
+    filter: saturate(2);
+}
+
+.b_exp1 #header > a:hover:before,
+.b_exp2 #header > a:hover:before,
+.b_exp3 #header > a:hover:before,
+.b_exp4 #header > a:hover:before,
+.b_exp5 #header > a:hover:before,
+.b_exp6 #header > a:hover:before {
+    opacity: 1;
+}
+
+.b_exp1 .container {
+    background-color: #008bcc;
+}
+
+.b_exp1 #header > a {
+    background-image: url(../images/banners/logo-level-1-1x.png);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .b_exp1 #header > a {
+        background-image: url(../images/banners/logo-level-1-2x.png);
+        background-size: 100%;
+    }
+}
+
+.b_exp1 #header > a:before {
+    background-image: url("../images/banners/starburst-fe.png");
+}
+
+.b_exp2 .container {
+    background-color: #e22328;
+}
+
+.b_exp2 #header > a {
+    background-image: url(../images/banners/logo-level-2-1x.png);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .b_exp2 #header > a {
+        background-image: url(../images/banners/logo-level-2-2x.png);
+        background-size: 100%;
+    }
+}
+
+.b_exp2 #header > a:before {
+    background-image: url("../images/banners/starburst-fe.png");
+}
+
+.b_exp3 .container {
+    background-color: #4cac49;
+}
+
+.b_exp3 #header > a {
+    background-image: url(../images/banners/logo-level-3-1x.png);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .b_exp3 #header > a {
+        background-image: url(../images/banners/logo-level-3-2x.png);
+        background-size: 100%;
+    }
+}
+
+.b_exp3 #header > a:before {
+    background-image: url("../images/banners/starburst-ye.png");
+}
+
+.b_exp4 .container {
+    background-color: #8f4a94;
+}
+
+.b_exp4 #header > a {
+    background-image: url(../images/banners/logo-level-4-1x.png);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .b_exp4 #header > a {
+        background-image: url(../images/banners/logo-level-4-2x.png);
+        background-size: 100%;
+    }
+}
+
+.b_exp4 #header > a:before {
+    background-image: url("../images/banners/starburst-ye.png");
+}
+
+.b_exp5 .container {
+    background-color: #008984;
+}
+
+.b_exp5 #header > a {
+    background-image: url(../images/banners/logo-level-5-1x.png);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .b_exp5 #header > a {
+        background-image: url(../images/banners/logo-level-5-2x.png);
+        background-size: 100%;
+    }
+}
+
+.b_exp5 #header > a:before {
+    background-image: url("../images/banners/starburst-we.png");
+}
+
+.b_exp6 .container {
+    background-color: #08528b;
+}
+
+.b_exp6 #header > a {
+    background-image: url(../images/banners/logo-level-6-1x.png);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .b_exp6 #header > a {
+        background-image: url(../images/banners/logo-level-6-2x.png);
+        background-size: 100%;
+    }
+}
+
+.b_exp6 #header > a:before {
+    background-image: url("../images/banners/starburst-we.png");
+}
+

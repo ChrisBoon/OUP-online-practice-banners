@@ -1,0 +1,139 @@
+@import '../base/_helpers';
+
+///VST
+
+
+// .zzz- class is used to scope styles in my master page.
+// build process strips the class name back out so vst can simply copy and paste code without adjusting selectors
+.zzz-exp{
+  //all primary banners should include these:
+        .container{
+          height: 80px; //set to primary height
+        }
+        #header{
+          height: 100%;
+        }
+
+        #headBtn{
+          margin-top: 5px;
+        }
+
+  //COURSE SPECIFIC BELOW HERE
+  .container{
+    background-color: #008bcc; //default banner color
+  }
+
+  //add default logo styles:
+  #header>a{
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    width: 160px;
+    @include hiRes('../assets/primary-exp/logo-course');
+    &:before{
+      background-image:url('../assets/primary-exp/starburst-course.png');
+    }
+    &:before{
+      position: absolute;
+      display: block;
+      content: "";
+      width: 276px;
+      height: 80px;
+      left: -69px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100%;
+      opacity:0.5;
+      transition: all 0.5s;
+      pointer-events: none;
+    }
+  }
+
+  .b_exp1,
+  .b_exp2,
+  .b_exp3,
+  .b_exp4,
+  .b_exp5,
+  .b_exp6{
+    #header>a{
+      width: 190px;
+      cursor: pointer;
+      transition: all 0.2s; 
+      &:hover{
+        filter: saturate(2);
+        &:before{
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .b_exp1{
+    .container{
+      background-color: #008bcc;
+    }
+    #header>a{
+      @include hiRes('../assets/primary-exp/logo-level-1');
+      &:before{
+        background-image:url('../assets/primary-exp/starburst-fe.png');
+      }
+    }
+  }
+
+  .b_exp2{
+    .container{
+      background-color: #e22328;
+    }
+    #header>a{
+      @include hiRes('../assets/primary-exp/logo-level-2');
+      &:before{
+        background-image:url('../assets/primary-exp/starburst-fe.png');
+      }
+    }
+  }
+
+  .b_exp3{
+    .container{
+      background-color: #4cac49;
+    }
+    #header>a{
+      @include hiRes('../assets/primary-exp/logo-level-3');
+      &:before{
+        background-image:url('../assets/primary-exp/starburst-ye.png');
+      }
+    }
+  }
+  .b_exp4{
+    .container{
+      background-color: #8f4a94;
+    }
+    #header>a{
+      @include hiRes('../assets/primary-exp/logo-level-4');
+      &:before{
+        background-image:url('../assets/primary-exp/starburst-ye.png');
+      }
+    }
+  }
+  .b_exp5{
+    .container{
+      background-color: #008984;
+    }
+    #header>a{
+      @include hiRes('../assets/primary-exp/logo-level-5');
+      &:before{
+        background-image:url('../assets/primary-exp/starburst-we.png');
+      }
+    }
+  }
+  .b_exp6{
+    .container{
+      background-color: #08528b;
+    }
+    #header>a{
+      @include hiRes('../assets/primary-exp/logo-level-6');
+      &:before{
+        background-image:url('../assets/primary-exp/starburst-we.png');
+      }
+    }
+  }
+}

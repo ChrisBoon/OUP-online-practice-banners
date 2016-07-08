@@ -1,0 +1,264 @@
+.banner{
+  margin-bottom: 10px;
+  font-size: 14px;
+  background: #ccc;
+  min-width: 768px;
+
+  &__container{
+    height: 100%;
+    width: $page-width;
+    margin: 0 auto;
+    @extend %clearfix;
+  }
+
+  &__logo{
+    max-width: $logo-max-width;
+    height: 100%;
+    float: left;
+  }
+  &__nav{
+    max-width: $page-width - $logo-max-width;
+    float: right;
+    height: 100%;
+
+    &__ul{
+      @extend %clearfix;
+    }
+
+    &__li{
+      float: left;
+      display: block;
+      @include user-select-none;
+      @include no-tap-color;
+      cursor: pointer;
+    }
+  }
+  &--primary{
+    height: $primary-banner-height;
+    font-weight: 600;
+    color: rgb(0, 148, 215);
+    .banner__container{
+      height: $primary-banner-height;
+    }
+    .banner__nav{
+      &__ul{
+        margin-top: 5px;
+      }
+
+      &__li{
+        @include transitionAll;
+        height: 70px;
+        background:url("../img/primary-head-nav-icons.svg") no-repeat;
+        background-position: 50% 0%;
+        border-radius: 16px;
+        margin-left: 8px;
+        &--home{
+          background-position: 50% -0.5%; 
+        }
+        &--profile{
+          background-position: 50% 35%; 
+        }
+        &--logout{
+          background-position: 50% 72%; 
+        }
+        &--help{
+          background-position: 50% 108%; 
+        }
+        & span{
+          display: block;
+          height: 20px;
+          margin-top: 50px;
+          background:#fff;
+          padding: 0 9px;
+          border-radius: 9px;
+        }
+        &:hover{
+          background-color: rgba(255, 255, 255, 0.6);
+          & span{
+            border-radius: 0 0 9px 9px;
+          }
+        }
+      }
+    }
+    &.banner--course .banner__nav__li--active{
+      background-color: rgba(255, 255, 255, 0.6);
+      pointer-events:none;
+      cursor: default;
+      & span{
+        border-radius: 0 0 9px 9px;
+      }
+    }
+  }
+  &--adult{
+    height: $adult-banner-height;
+    font-weight: 400;
+    font-size: 16px;
+    color:#fff;
+    .banner__container{
+      height: $adult-banner-height;
+    }
+    .banner__nav{
+      &__ul{
+        margin-top: 17px;
+      }
+      &__li{
+        height:36px;
+        line-height: 36px;
+        padding: 0 8px;
+        border-radius: 3px;
+        margin-left: 10px;
+        @include transitionAll;
+        &:hover{
+          background: rgba(#000,0.25);
+        }
+      }
+    }
+    &.banner--course .banner__nav__li--active{
+      background-color: rgba(#000,0.5);
+      pointer-events:none;
+      cursor: default;
+    }
+  }
+}
+
+
+.vst-primary{
+
+//VST VERSION:
+.container{
+  font-weight: 600;
+  color: rgb(0, 148, 215);
+  font-size: 14px;
+}
+
+#header{
+  width: $page-width;
+  height: 100%;
+  margin: 0 auto;
+  @extend %clearfix;
+}
+
+#header>a{
+  max-width: $logo-max-width;
+  height: 100%;
+  float: left;
+  cursor: default;
+}
+#headBtn {
+  margin-top: -1px;
+  max-width: 418px;
+  float: right;
+  height: 100%;
+
+  #btnhome{  background-position: 50% -0.5%; }
+  #btneditprofile{  background-position: 50% 35%; }
+  #btnlogout{  background-position: 50% 72%; }
+  #btnhelp{  background-position: 50% 108%; }
+}
+
+#headBtn li {
+  transition: all 0.2s;
+  height: 70px;
+  background: url("../img/primary-head-nav-icons.svg") no-repeat;
+  background-position: 50% 0%;
+  border-radius: 16px;
+  margin-left: 8px;
+  float: left;
+  display: block;
+  user-select: none;
+  cursor: pointer;
+  &.disabled{
+    background-color: rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+    cursor: default;
+    & span{
+      border-radius: 0 0 9px 9px;
+    }
+  }
+  &:hover{
+  background-color: rgba(255, 255, 255, 0.6);
+    span{
+      border-radius: 0 0 9px 9px;
+    }
+  }
+}
+
+#headBtn a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+#headBtn span {
+    display: block;
+    height: 20px;
+    margin-top: 50px;
+    background: #fff;
+    padding: 0 9px;
+    border-radius: 9px;
+    line-height: 19px;
+}
+
+}
+
+.vst-adult{
+
+  //VST VERSION:
+  .container{
+    color: rgb(0, 148, 215);
+    font-size: 16px;
+    background:#ddd;
+  }
+
+  #header{
+    width: $page-width;
+    height: 70px;
+    margin: 0 auto;
+    @extend %clearfix;
+  }
+
+  #header>a{
+    max-width: $logo-max-width;
+    height: 100%;
+    float: left;
+    cursor: default;
+  }
+  #headBtn {
+      padding-top: 17px;
+      max-width: 418px;
+      float: right;
+      height: 100%;
+  }
+
+  #headBtn li {
+    height: 36px;
+    line-height: 36px;
+    border-radius: 3px;
+    margin-left: 10px;
+    transition: all .2s;
+    float: left;
+    display: block;
+    user-select: none;
+    cursor: pointer;
+    color: #fff;
+    &.disabled{
+      background-color: rgba(255, 255, 255, 0.6);
+      pointer-events: none;
+      cursor: default;
+
+    }
+    &:hover{
+      background-color: rgba(255, 255, 255, 0.35);
+
+    }
+  }
+
+  #headBtn a {
+    height: 100%;
+    display: inline-block;
+    padding: 0 8px;
+    color: inherit;
+    text-decoration: none;
+  }
+}

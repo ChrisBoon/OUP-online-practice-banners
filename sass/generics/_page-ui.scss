@@ -1,0 +1,212 @@
+@keyframes openPanel {
+  0% {
+    opacity: 0;
+    -webkit-filter: saturate(0%);
+  }
+  40% {
+    opacity: 1;
+  } 
+  100% {
+    -webkit-filter: saturate(100%);
+  } 
+}
+
+$active-color: #C2185B;
+$accent-color: #03768F;
+.pageContainer{
+  padding-top: 2.5em;
+}
+.page-menu{
+  position: fixed;
+  width: 100%;
+  z-index: z("toolbar");
+  top: 0;  height: 2.5em;
+  overflow: hidden;
+  padding: 0.5em;
+  line-height: 1;
+  background: #fff;
+  color: #7F7F7F;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.2);
+  font-weight: 300;
+  @include clearfix;
+  >*{
+    float: left;
+    margin-right: 1em;
+  }  
+  &__heading{
+    padding: 0.2em 0
+  }
+  &__toggle--changelog{
+    // float: right;
+  }
+  &__toggle{
+    @include user-select-none;
+    @include no-tap-color;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    padding: 0.4em 1em;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+    border-radius: 0.25em;
+    &:hover{
+      background:rgba(0,0,0,0.05);
+    }
+    &.active{
+      color: $active-color;
+      background:rgba($active-color, .05);
+    }
+  }
+}
+.page-filters{
+  left:0;
+  width:250px;
+  transform: translate(-255px);
+  box-shadow: 2px 0 3px 0 rgba(0,0,0,0.2);
+  position: fixed;
+  height: 100%;
+  top: 0;
+  z-index: z("sidebar");
+  background: #fff;
+  padding: 0;
+  transition:transform 0.2s;
+  &.open{
+    transform: translate(0px);
+    .page-filters__filter_toggle{
+      animation: openPanel 1.2s;
+    }
+  }
+  font-size: 14px;
+  h2{
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
+    padding: 16px;
+  }
+  &__filter_toggle{
+    @include user-select-none;
+    @include no-tap-color;
+    padding: 8px 16px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    position: relative;
+    &:before{
+      content: "";
+      display: block;
+      position: absolute;
+      right:1em;
+      top: calc(50% - 1px);
+      background: #ccc;
+      height: 2px;
+      border-radius: 1px;
+      width: 30px;
+      transition:all 0.2s;
+    }
+    &--active:before{
+      background: $active-color;
+    }
+    &:after{
+      content: "";
+      display: block;
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      border-radius: 8px;
+      background: #ccc;
+      right: calc(1em + 22px);
+      top: calc(50% - 8px);
+      transition:all 0.2s;
+    }
+    &--active:after{
+      background: $active-color;
+      transform: translate(30px);
+    }
+    &:hover{
+      background:rgba(0,0,0,0.05);
+    }
+  }
+}
+
+.page-changelog{
+  right:0;
+  width:350px;
+  transform: translate(355px);
+  box-shadow: -2px 0 3px 0 rgba(0,0,0,0.2);
+  position: fixed;
+  height: 100%;
+  top: 0;
+  z-index: z("sidebar");
+  background: #fff;
+  padding: 0;
+  transition:transform 0.2s;
+  font-size: 14px;
+  h2{
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
+    padding: 16px;
+  }
+  &__list__item{
+    border-bottom: 1px solid #eee;
+    padding: 8px;
+    @include clearfix;
+    >*{
+      display: block;
+    }
+  }
+  &__list{
+    &__versionnumber{
+      float: left;
+      width: 3em;
+      height: 3em;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 3em;
+    }
+    &__date{
+      margin-left: 3.5em;
+      color: rgba($accent-color,0.4);
+      font-weight: 600;
+    }
+    &__summary{
+      margin-left: 3.5em;
+    }
+  }
+  &.open{
+    transform: translate(0px);
+    .page-changelog__list{
+      animation: openPanel 1.2s;
+    }
+  }
+}
+
+@for $i from 1 through 9 {
+  .page-changelog__list__item:nth-child(#{$i}) { 
+    $bg-col:  1 - ( $i / 10 ); 
+    .page-changelog__list__versionnumber{
+      background-color: rgba($accent-color, $bg-col );
+      @if $i < 7{
+        color:#fff;
+      }
+      @else{
+        color:$accent-color;
+      }      
+    }
+  }
+}
+
+.the-banners{
+  transition: opacity 0.4s;
+  &.overlay-active{
+    opacity: 0.10;
+    cursor:pointer;
+  }
+}
+
+
+.faux-body{
+  //VST SHOULD NOT INCLUDE THIS RULE
+  margin-bottom: 10px;
+  font-size: 14px;
+  min-width: 768px;
+}

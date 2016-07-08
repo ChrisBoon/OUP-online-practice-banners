@@ -1,0 +1,89 @@
+@import '../base/_helpers';
+
+$level:(
+  level1: rgb(178,219,241),
+  level2: rgb(241,189,191),
+  level3: rgb(198,230,200),
+  level4: rgb(252,217,188),
+  level5: rgb(227,189,221),
+  course: rgb(178,219,241)
+);
+
+.zzz-so{
+  //all elm containers:
+  .container{
+    height: 80px;
+    background-color: map-get($level, course);
+    // padding-left: 16px;
+    background-repeat: no-repeat;
+    background-image: url('../assets/primary-so/banner-course.svg');
+    background-position: calc(50% - 224px) 0;
+  }
+  #header{
+    width: 100%;
+    max-width: 768px;
+  }
+  //all elm logos
+  #header>a{
+    position: relative;
+    width: 273px;
+    background-repeat: no-repeat;
+    @include hiRes ('../assets/primary-so/logo-course');
+  }
+  #headBtn{
+    margin-top: 5px;
+    height: 70px;
+  }
+
+  .b_so1,
+  .b_so2,
+  .b_so3,
+  .b_so4,
+  .b_so5{
+
+    #header>a{
+      width: 332px;
+      cursor: pointer;
+      transition: filter 0.2s;
+      overflow: hidden;
+      &:before{
+        position: absolute;
+        display: block;
+        content: "";
+        top: 2px;
+        left: 152px;
+        background-image: url('../assets/primary-so/logo-level-starburst.svg');
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+        width: 100px;
+        height: 100px;
+        background-size: 20px;
+        opacity: 0.5;
+        transition: transform 0.2s, background-size 0.2s, opacity 0.2s;
+        will-change: all;
+      }
+      &:hover{
+        filter: saturate(2);
+        &:before{
+          transform: rotate(180deg);
+          opacity: 0.8;
+          background-size: 50px;
+        }
+      }
+    }
+  }
+
+
+  @for $i from 1 through 5{
+    .b_so#{$i}{
+      .container{
+        background-color: map-get($level, level#{$i});
+      }
+      #header>a{
+        @include hiRes ('../assets/primary-so/logo-level-#{$i}');
+
+      }
+
+    }
+  }
+}

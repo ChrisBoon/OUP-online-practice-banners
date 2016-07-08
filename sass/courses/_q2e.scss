@@ -1,0 +1,306 @@
+//Global colors
+$course-col1: rgb(0,0,0);
+$course-col2: rgb(255,255,255);
+$course-col3: rgb(175,175,175);
+
+//level intro colors
+$level0-col1: rgb(171,58,142);
+$level0-col2: rgb(210,160,200);
+
+//level 1 colors
+$level1-col1: rgb(245,156,0);
+$level1-col2: rgb(187,80,19);
+
+//level 2 colors
+$level2-col1: rgb(64,190,224);
+$level2-col2: rgb(0,85,113);
+
+//level 3 colors
+$level3-col1: rgb(175,203,32);
+$level3-col2: rgb(70,129,48);
+
+//level 4 colors
+$level4-col1: rgb(129,126,186);
+$level4-col2: rgb(36,42,118);
+
+//level 5 colors
+$level5-col1: rgb(196,29,24);
+$level5-col2: rgb(243,155,101);
+
+//logo breakpoint
+
+@mixin q2eMoveTriangles ($filePath){
+  &:before{
+    content: "";
+    display: block;
+    float: left;
+    height: 70px;
+    width: 61px;
+    background-image: url($filePath);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+
+.banner--q2e{
+  //all banners
+  background-size: contain;
+  background-repeat: no-repeat;
+  .banner__container{
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .banner__logo{
+    background-size: contain;
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    background-size: 95%;
+    transform-origin: 0 0;
+  }
+
+  &.banner--course{
+    //generic 'course' banner only
+    background-color: $course-col1;
+    @include q2eMoveTriangles ('../assets/adult-q2e/banner-course-2x.png');
+    .banner__container{
+    }
+    .banner__logo{
+      width: 297px;
+      background-image: url(../assets/adult-q2e/logo-course-2x.png);
+    }
+
+    .banner__nav__li{
+      &--active{
+        background: rgba($course-col2,0.5);
+      }
+      &:hover{
+        background: rgba($course-col2,0.35);
+      }
+    }
+  }
+
+  &.banner--level{
+    .banner__logo{
+      &:hover{
+        transform: scale(1.05); 
+        cursor: pointer;
+      }
+    }
+    &--0-rw{
+      //level specific
+      @include q2eMoveTriangles ('../assets/adult-q2e/banner-level-0-2x.png');
+      background-color: $level0-col1;
+      .banner__container{
+
+      }
+      .banner__logo{
+        width: 332px;
+        background-image: url(../assets/adult-q2e/logo-level-0-rw-2x.png);
+      }
+      .banner__nav__li{
+        &:hover{
+          background: rgba($level0-col2,0.5);
+        }
+      }
+    }
+
+    &--1-rw{
+      //level specific
+      background-color: $level1-col1;
+      @include q2eMoveTriangles ('../assets/adult-q2e/banner-level-1-2x.png');
+      .banner__container{
+
+      }
+      .banner__logo{
+        width: 325px;
+        background-image: url(../assets/adult-q2e/logo-level-1-rw-2x.png);
+      }
+      .banner__nav__li{
+        &:hover{
+          background: rgba($level1-col2,0.5);
+        }
+      }
+    }
+    &--2-rw{
+      //level specific
+      background-color: $level2-col1;
+      @include q2eMoveTriangles ('../assets/adult-q2e/banner-level-2-2x.png');
+      .banner__container{
+
+      }
+      .banner__logo{
+        width: 326px;
+        background-image: url(../assets/adult-q2e/logo-level-2-rw-2x.png);
+      }
+      .banner__nav__li{
+        &:hover{
+          background: rgba($level2-col2,0.5);
+        }
+      }
+
+    }
+    &--3-rw{
+      //level specific
+      @include q2eMoveTriangles ('../assets/adult-q2e/banner-level-3-2x.png');
+      background-color: $level3-col1;
+      .banner__container{
+
+      }
+      .banner__logo{
+        width: 325px;
+        background-image: url(../assets/adult-q2e/logo-level-3-rw-2x.png);
+      }
+      .banner__nav__li{
+        &:hover{
+          background: rgba($level3-col2,0.5);
+        }
+    }
+
+    }
+    &--4-rw{
+      //level specific
+      @include q2eMoveTriangles ('../assets/adult-q2e/banner-level-4-2x.png');
+      background-color: $level4-col1;
+      .banner__container{
+
+      }
+      .banner__logo{
+        width: 327px;
+        background-image: url(../assets/adult-q2e/logo-level-4-rw-2x.png);
+      }
+      .banner__nav__li{
+        &:hover{
+          background: rgba($level4-col2,0.5);
+        }
+    }
+
+    }
+    &--5-rw{
+      //level specific
+      @include q2eMoveTriangles ('../assets/adult-q2e/banner-level-5-2x.png');
+      background-color: $level5-col1;
+      .banner__container{
+
+      }
+      .banner__logo{
+        width: 325px;
+        background-image: url(../assets/adult-q2e/logo-level-5-rw-2x.png);
+      }
+      .banner__nav__li{
+        &:hover{
+          background: rgba($level5-col2,0.5);
+        }
+      }
+    }
+
+    &--0-ls{
+      //level specific
+      @include q2eMoveTriangles ('../assets/adult-q2e/banner-level-0-2x.png');
+      background-color: $level0-col1;
+      .banner__container{
+
+      }
+      .banner__logo{
+        width: 332px;
+        background-image: url(../assets/adult-q2e/logo-level-0-ls-2x.png);
+      }
+      .banner__nav__li{
+        &:hover{
+          background: rgba($level0-col2,0.5);
+        }
+      }
+    }
+
+    &--1-ls{
+      //level specific
+      @include q2eMoveTriangles ('../assets/adult-q2e/banner-level-1-2x.png');
+      background-color: $level1-col1;
+      .banner__container{
+
+      }
+      .banner__logo{
+        width: 325px;
+        background-image: url(../assets/adult-q2e/logo-level-1-ls-2x.png);
+      }
+      .banner__nav__li{
+        &:hover{
+          background: rgba($level1-col2,0.5);
+        }
+      }
+    }
+
+    &--2-ls{
+      //level specific
+      @include q2eMoveTriangles ('../assets/adult-q2e/banner-level-2-2x.png');
+      background-color: $level2-col1;
+      .banner__container{
+
+      }
+      .banner__logo{
+        width: 326px;
+        background-image: url(../assets/adult-q2e/logo-level-2-ls-2x.png);
+      }
+      .banner__nav__li{
+        &:hover{
+          background: rgba($level2-col2,0.5);
+        }
+    }
+
+    }
+    &--3-ls{
+      //level specific
+      @include q2eMoveTriangles ('../assets/adult-q2e/banner-level-3-2x.png');
+      background-color: $level3-col1;
+      .banner__container{
+
+      }
+      .banner__logo{
+        width: 325px;
+        background-image: url(../assets/adult-q2e/logo-level-3-ls-2x.png);
+      }
+      .banner__nav__li{
+        &:hover{
+          background: rgba($level3-col2,0.5);
+        }
+    }
+
+    }
+    &--4-ls{
+      //level specific
+      @include q2eMoveTriangles ('../assets/adult-q2e/banner-level-4-2x.png');
+      background-color: $level4-col1;
+      .banner__container{
+
+      }
+      .banner__logo{
+        width: 327px;
+        background-image: url(../assets/adult-q2e/logo-level-4-ls-2x.png);
+      }
+      .banner__nav__li{
+        &:hover{
+          background: rgba($level4-col2,0.5);
+        }
+    }
+
+    }
+    &--5-ls{
+      //level specific
+      @include q2eMoveTriangles ('../assets/adult-q2e/banner-level-5-2x.png');
+      background-color: $level5-col1;
+      .banner__container{
+
+      }
+      .banner__logo{
+        width: 325px;
+        background-image: url(../assets/adult-q2e/logo-level-5-ls-2x.png);
+      }
+      .banner__nav__li{
+        &:hover{
+          background: rgba($level5-col2,0.5);
+        }
+      }
+    }
+
+  }
+}

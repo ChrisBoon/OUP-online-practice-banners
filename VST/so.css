@@ -1,0 +1,164 @@
+.container {
+    height: 80px;
+    background-color: #b2dbf1;
+    background-repeat: no-repeat;
+    background-image: url("../images/banners/banner-course.svg");
+    background-position: calc(50% - 224px) 0;
+}
+
+#header {
+    width: 100%;
+    max-width: 768px;
+}
+
+#header > a {
+    position: relative;
+    width: 273px;
+    background-repeat: no-repeat;
+    background-image: url(../images/banners/logo-course-1x.png);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    #header > a {
+        background-image: url(../images/banners/logo-course-2x.png);
+        background-size: 100%;
+    }
+}
+
+#headBtn {
+    margin-top: 5px;
+    height: 70px;
+}
+
+.b_so1 #header > a,
+.b_so2 #header > a,
+.b_so3 #header > a,
+.b_so4 #header > a,
+.b_so5 #header > a {
+    width: 332px;
+    cursor: pointer;
+    transition: -webkit-filter 0.2s;
+    transition: filter 0.2s;
+    transition: filter 0.2s, -webkit-filter 0.2s;
+    overflow: hidden;
+}
+
+.b_so1 #header > a:before,
+.b_so2 #header > a:before,
+.b_so3 #header > a:before,
+.b_so4 #header > a:before,
+.b_so5 #header > a:before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 2px;
+    left: 152px;
+    background-image: url("../images/banners/logo-level-starburst.svg");
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    width: 100px;
+    height: 100px;
+    background-size: 20px;
+    opacity: 0.5;
+    transition: background-size 0.2s, opacity 0.2s, -webkit-transform 0.2s;
+    transition: transform 0.2s, background-size 0.2s, opacity 0.2s;
+    transition: transform 0.2s, background-size 0.2s, opacity 0.2s, -webkit-transform 0.2s;
+    will-change: all;
+}
+
+.b_so1 #header > a:hover,
+.b_so2 #header > a:hover,
+.b_so3 #header > a:hover,
+.b_so4 #header > a:hover,
+.b_so5 #header > a:hover {
+    -webkit-filter: saturate(2);
+    filter: saturate(2);
+}
+
+.b_so1 #header > a:hover:before,
+.b_so2 #header > a:hover:before,
+.b_so3 #header > a:hover:before,
+.b_so4 #header > a:hover:before,
+.b_so5 #header > a:hover:before {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    opacity: 0.8;
+    background-size: 50px;
+}
+
+.b_so1 .container {
+    background-color: #b2dbf1;
+}
+
+.b_so1 #header > a {
+    background-image: url(../images/banners/logo-level-1-1x.png);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .b_so1 #header > a {
+        background-image: url(../images/banners/logo-level-1-2x.png);
+        background-size: 100%;
+    }
+}
+
+.b_so2 .container {
+    background-color: #f1bdbf;
+}
+
+.b_so2 #header > a {
+    background-image: url(../images/banners/logo-level-2-1x.png);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .b_so2 #header > a {
+        background-image: url(../images/banners/logo-level-2-2x.png);
+        background-size: 100%;
+    }
+}
+
+.b_so3 .container {
+    background-color: #c6e6c8;
+}
+
+.b_so3 #header > a {
+    background-image: url(../images/banners/logo-level-3-1x.png);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .b_so3 #header > a {
+        background-image: url(../images/banners/logo-level-3-2x.png);
+        background-size: 100%;
+    }
+}
+
+.b_so4 .container {
+    background-color: #fcd9bc;
+}
+
+.b_so4 #header > a {
+    background-image: url(../images/banners/logo-level-4-1x.png);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .b_so4 #header > a {
+        background-image: url(../images/banners/logo-level-4-2x.png);
+        background-size: 100%;
+    }
+}
+
+.b_so5 .container {
+    background-color: #e3bddd;
+}
+
+.b_so5 #header > a {
+    background-image: url(../images/banners/logo-level-5-1x.png);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .b_so5 #header > a {
+        background-image: url(../images/banners/logo-level-5-2x.png);
+        background-size: 100%;
+    }
+}
+

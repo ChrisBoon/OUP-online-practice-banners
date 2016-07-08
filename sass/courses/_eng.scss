@@ -1,0 +1,84 @@
+$eng-course-color-1: #2b4691;
+$eng-level-0-color-1: #0c78ba;
+$eng-level-1-color-1: #d16e24;
+$eng-level-2-color-1: #594995;
+$eng-level-3-color-1: #5ea542;
+
+.banner--eng{
+    background-repeat: no-repeat;
+    background-size: 926px, 460px;
+    background-position: calc(50% + 160px);
+
+  .banner__container{
+
+  }
+  .banner__logo{
+
+  }
+  &.banner--course{
+    background-color: $eng-course-color-1;
+    background-image: url('../assets/primary-eng/banner-circles-2x.png'),url('../assets/primary-eng/banner-course-1x.png');
+
+    .banner__container{
+
+
+    }
+    .banner__logo{
+      width: 230px;
+      @include hiRes('../assets/primary-eng/logo-course');
+
+    }
+  }
+  &.banner--level{
+    //all 'level' banners
+    .banner__logo{
+      width: 310px;
+      cursor: pointer;
+      &:hover{
+        background-position: 0 -80px;
+      }
+    }
+    &--1{
+      background-color: $eng-level-1-color-1;
+      background-image: url('../assets/primary-eng/banner-circles-2x.png'),url('../assets/primary-eng/banner-level-1-1x.png');
+
+      .banner__container{
+      }
+      .banner__logo{
+        @include hiRes('../assets/primary-eng/logo-level-1');
+      }
+    }
+    &--2{
+      background-color: $eng-level-2-color-1;
+      background-image: url('../assets/primary-eng/banner-circles-2x.png'),url('../assets/primary-eng/banner-level-2-1x.png');
+
+      .banner__container{
+
+      }
+      .banner__logo{
+        @include hiRes('../assets/primary-eng/logo-level-2');
+      }
+    }
+    &--3{
+      background-color: $eng-level-3-color-1;
+      background-image: url('../assets/primary-eng/banner-circles-2x.png'),url('../assets/primary-eng/banner-level-3-1x.png');
+
+      .banner__container{
+
+      }
+      .banner__logo{
+        @include hiRes('../assets/primary-eng/logo-level-3');
+      }
+    }
+    &--0{
+      background-color: $eng-level-0-color-1;
+      background-image: url('../assets/primary-eng/banner-circles-2x.png'),url('../assets/primary-eng/banner-level-0-1x.png');
+
+      .banner__container{
+      }
+      .banner__logo{
+        @include hiRes('../assets/primary-eng/logo-level-0');
+      }
+    }
+  }
+}

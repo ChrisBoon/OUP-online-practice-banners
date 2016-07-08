@@ -1,0 +1,140 @@
+.container {
+    background-color: #f58233;
+    padding-left: 16px;
+}
+
+#header {
+    background: transparent url("../images/banners/banner-course-2x.png") right top no-repeat;
+    background-size: 545px;
+    width: 100%;
+    max-width: 768px;
+}
+
+#header > a {
+    position: relative;
+    width: 267px;
+    background-position: -25px 0;
+    background-repeat: no-repeat;
+    background-size: 267px;
+    background-image: url("../images/banners/logo-course-2x.png");
+}
+
+#headBtn li.disabled {
+    background: rgba(185, 81, 9, 0.8);
+}
+
+#headBtn li:hover {
+    background: rgba(185, 81, 9, 0.6);
+}
+
+.b_sc3e0 #header > a,
+.b_sc3e1 #header > a,
+.b_sc3e2 #header > a,
+.b_sc3e3 #header > a {
+    cursor: pointer;
+    transition: background-position 0.2s;
+}
+
+.b_sc3e0 #header > a:hover,
+.b_sc3e1 #header > a:hover,
+.b_sc3e2 #header > a:hover,
+.b_sc3e3 #header > a:hover {
+    background-position: 0 0;
+}
+
+.b_sc3e0 .container {
+    background: linear-gradient(to right, #f58233 50%, #9ac144 50%);
+}
+
+.b_sc3e0 #header {
+    background-image: url("../images/banners/banner-level-0-2x.png");
+}
+
+.b_sc3e0 #header > a:after {
+    position: absolute;
+    display: block;
+    content: "";
+    left: 100%;
+    top: 0;
+    height: 70px;
+    background: url("../images/banners/logo-level-0-2x.png");
+    background-size: 100%;
+    width: 97px;
+}
+
+.b_sc3e0 #headBtn li:hover {
+    background: rgba(95, 119, 40, 0.6);
+}
+
+.b_sc3e1 .container {
+    background: linear-gradient(to right, #f58233 50%, #00a9cb 50%);
+}
+
+.b_sc3e1 #header {
+    background-image: url("../images/banners/banner-level-1-2x.png");
+}
+
+.b_sc3e1 #header > a:after {
+    position: absolute;
+    display: block;
+    content: "";
+    left: 100%;
+    top: 0;
+    height: 70px;
+    background: url("../images/banners/logo-level-1-2x.png");
+    background-size: 100%;
+    width: 23px;
+}
+
+.b_sc3e1 #headBtn li:hover {
+    background: rgba(0, 84, 101, 0.6);
+}
+
+.b_sc3e2 .container {
+    background: linear-gradient(to right, #f58233 50%, #d9394e 50%);
+}
+
+.b_sc3e2 #header {
+    background-image: url("../images/banners/banner-level-2-2x.png");
+}
+
+.b_sc3e2 #header > a:after {
+    position: absolute;
+    display: block;
+    content: "";
+    left: 100%;
+    top: 0;
+    height: 70px;
+    background: url("../images/banners/logo-level-2-2x.png");
+    background-size: 100%;
+    width: 23px;
+}
+
+.b_sc3e2 #headBtn li:hover {
+    background: rgba(144, 28, 43, 0.6);
+}
+
+.b_sc3e3 .container {
+    background: linear-gradient(to right, #f58233 50%, #8f499c 50%);
+}
+
+.b_sc3e3 #header {
+    background-image: url("../images/banners/banner-level-3-2x.png");
+}
+
+.b_sc3e3 #header > a:after {
+    position: absolute;
+    display: block;
+    content: "";
+    left: 100%;
+    top: 0;
+    height: 70px;
+    background: url("../images/banners/logo-level-3-2x.png");
+    background-size: 100%;
+    width: 23px;
+}
+
+.b_sc3e3 #headBtn li:hover {
+    background: rgba(79, 40, 87, 0.6);
+}
+

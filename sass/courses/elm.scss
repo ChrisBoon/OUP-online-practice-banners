@@ -1,0 +1,117 @@
+@import '../base/_helpers';
+
+$course-col1: rgb(168,103,0);
+$course-col2: rgb(201,138,3);
+$course-col3: rgb(227,172,71);
+
+//level 1 colors
+$level1-col1: rgb(159,33,21);
+$level1-col2: rgb(234,108,8);
+$level1-col3: rgb(244,154,58);
+
+//level 2 colors
+$level2-col1: rgb(0,93,40);
+$level2-col2: rgb(95,174,47);
+$level2-col3: rgb(218,218,0);
+
+//level 3 colors
+$level3-col1: rgb(0,59,117);
+$level3-col2: rgb(0,153,204);
+$level3-col3: rgb(0,204,204);
+
+//level 4 colors
+$level4-col1: rgb(134,21,199);
+$level4-col2: rgb(166,35,128);
+$level4-col3: rgb(205,76,163);
+$level4-col4: rgb(85, 18, 124);
+
+.zzz-elm{
+  //all elm containers:
+  .container{
+    background-size: contain;
+    background-repeat: repeat;
+    background-color: $course-col1;
+    background-image: url(../assets/adult-elm/triangles.png), linear-gradient(to right, $course-col1 0%, $course-col2 50%, $course-col3 100%);
+  }
+  //all elm logos
+  #header>a{
+    width: 350px;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url('../assets/adult-elm/logo-course-2x.png');
+  }
+  #headBtn li{
+    &.disabled{
+      background: rgba($course-col1,0.8);
+    }
+    &:hover{
+      background: rgba($course-col1,0.5);
+    }
+  }
+  .b_elm1,
+  .b_elm2,
+  .b_elm3,
+  .b_elm4{
+    #header>a{
+      cursor: pointer;
+      &:hover{
+        background-position: 100% 0%;
+      }
+    }
+  }
+
+  .b_elm1{
+    .container{
+      background-color: $level1-col1;
+      background-image: url(../assets/adult-elm/triangles.png), linear-gradient(to right, $level1-col1 0%, $level1-col2 50%, $level1-col3 100%);
+    }
+    #header>a{
+      background-image: url('../assets/adult-elm/logo-level-1-2x.png');
+    }
+    #header #headBtn li:hover{
+      background: rgba($level1-col1,0.35);
+    }
+  }
+
+  .b_elm2{
+    .container{
+      background-color: $level2-col1;
+      background-image: url(../assets/adult-elm/triangles.png), linear-gradient(to right, $level2-col1 0%, $level2-col2 50%, $level2-col3 100%);
+    }
+    #header>a{
+      background-image: url('../assets/adult-elm/logo-level-2-2x.png');
+    }
+    #header #headBtn li:hover{
+      background: rgba($level2-col1,0.35);
+    }
+  }
+
+  .b_elm3{
+    .container{
+      background-color: $level1-col3;
+      background-image: url(../assets/adult-elm/triangles.png), linear-gradient(to right, $level3-col1 0%, $level3-col2 50%, $level3-col3 100%);
+    }
+    #header>a{
+      background-image: url('../assets/adult-elm/logo-level-3-2x.png');
+    }
+    #header #headBtn li:hover{
+      background: rgba($level3-col1,0.35);
+    }
+  }
+
+  .b_elm4{
+    .container{
+      background-color: $level4-col1;
+      background-image: url(../assets/adult-elm/triangles.png), linear-gradient(to right, $level4-col1 0%, $level4-col2 50%, $level4-col3 100%);
+    }
+    #header>a{
+      background-image: url('../assets/adult-elm/logo-level-4-2x.png');
+    }
+    #header #headBtn li:hover{
+      background: rgba($level4-col4,0.4);
+    }
+  }
+
+
+}

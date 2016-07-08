@@ -1,0 +1,221 @@
+//Global color
+  //col1 is used for the main banner color
+  //col2 is used for the hover states on the links within the banner
+$course-col1: rgb(68,128,152); 
+$course-col2: darken($course-col1,20); //temp: change these
+
+//level intro color
+$level0-col1: rgb(201,65,99);
+$level0-col2: darken($level0-col1,20); //temp: change these
+
+//level 1 color
+$level1-col1: rgb(0,111,69);
+$level1-col2: darken($level1-col1,10); //temp: change these
+
+//level 2 color
+$level2-col1: rgb(217,103,29);
+$level2-col2: darken($level2-col1,20); //temp: change these
+
+//level 3 color
+$level3-col1: rgb(39,85,159);
+$level3-col2: darken($level3-col1,20); //temp: change these
+
+//level 4 color
+$level4-col1: rgb(114,38,113);
+$level4-col2: darken($level4-col1,12); //temp: change these
+
+
+//measurements for calculating sizes and positions of elements:
+$banner-height: 70px; //height of all Adult banners
+$text-height: 44px; //height of the text portion of the logo
+$text-width: 207px; //width of the text portion of the logo
+$circle-size: 54px; //diameter of the circle in the level specific banners
+$logo-space-between: 8px; //space between circle and text
+$number-width: 32px; //width of the number portion of the logo (level specific only)
+
+
+.banner--ils{
+  //all banners
+  .banner__container{
+
+  }
+  .banner__logo{
+    background-image: url(../assets/adult-ils/logo-2x.png); //all banners use the same text part of the logo
+    width: $text-width;
+    height: $text-height;
+    background-size: $text-width; //bg-size set to scale down the image (supplied at 2x resolution for maintaining quality on hi-res screens)
+    margin-top: ( $banner-height - $text-height) /2 ; // vertically centers the logo within the banner
+    margin-left: $logo-space-between ;
+  }
+
+  &.banner--course{
+    //generic 'course' banner only
+    background-color: $course-col1;
+
+    .banner__container{
+      background-image: url(../assets/adult-ils/logo_circles-course-2x.jpg);
+      background-repeat: no-repeat;
+      background-size: 222px;
+      background-position: $text-width 0;
+    }
+    .banner__logo{
+
+    }
+
+    .banner__nav__li{
+      &--active{
+        background: rgba($course-col2,0.75); //sets the active state at 75% alpha of the chosen color
+      }
+      &:hover{
+        background: rgba($course-col2,0.40); //sets the active state at 50% alpha of the chosen color
+      }
+    }
+  }
+
+  &.banner--level{
+    .banner__logo{
+      margin-left: $circle-size + $logo-space-between; //circle will be absolutely positioned so leaving enough margin here for it to sit within
+      position: relative; //allows pseudo-elements to be positioned relatively to this element
+      cursor: pointer; //clickable link so adding pointer
+      box-sizing: content-box; //padding will be used to increase footprint of text part of logo so there is no gap between it and its pseudo-elements.
+      padding: 0 ($logo-space-between*2) 0 $logo-space-between; //adds the padding to the text part
+      background-position: $logo-space-between 0; //moves the background-image across appropriately so it still appears there is a gap between the circle and the text
+      background-repeat: no-repeat; //stops the text from tiling
+
+      &:before{
+        //pseudo-element used to create the circle
+        position: absolute; //positioned relative to the text part of the logo
+        display: block; //required for pseudo-element positioning
+        content: ""; //required for pseudo-element positioning
+        width: $circle-size;
+        height: $circle-size;
+        border-radius: $circle-size /2; 
+        left: -($circle-size); //negative number! - move this back to the start of the banner (this accounts for the margin we added to the text part of the logo)
+        top: -($circle-size - $text-height) /2; //negative number! - the circle is slightly taller than the text so we need to get the difference and half it to find out how far from top it should be positioned
+        background-size: $circle-size; //bg-size set to scale down the image (supplied at 2x resolution for maintaining quality on hi-res screens)
+      }
+      &:after{
+        //pseudo-element used to create the level number
+        position: absolute; //positioned relative to the text part of the logo
+        display: block; //required for pseudo-element positioning
+        content: ""; //required for pseudo-element positioning
+        height: $text-height; //height is same as text part of the logo for easy alignment(number doesn't look as tall because it doesn't fill the entire element)
+        width: $number-width;
+        left: ($logo-space-between *3) + $text-width; //positioned the width of the text plus a bit of space. Used double the space we used between circle and text for aesthetic reasons. Also has to account for the padding to the left of the text part which is why it is $logo-space-between*3 not $logo-space-between*2.
+        background-size: 100%; //bg-size set to scale down the image (supplied at 2x resolution for maintaining quality on hi-res screens)
+      }
+      &:hover{
+        transform: scale(1.05);
+      }
+    }
+    //level specific stuff beyond here should be really obvious so only writing comments where I do something unusual.
+    //note I should probably rewrite these to use a loop as there's a ton of repetition to these rules but not sure it is worth the time.
+    &--0{
+      //level specific
+      background-color: $level0-col1;
+      .banner__container{
+
+      }
+      .banner__logo{
+        &:before{
+          background-image: url(../assets/adult-ils/logo_img-level-0-2x.jpg);
+        }
+        &:after{
+          background-image: url(../assets/adult-ils/logo_number-level-0-2x.png);
+          width: 60px; //overwriting default width as this level 'number' is 'intro' so needs to be wider than '1', '2', etc.
+        }
+
+      }
+      .banner__nav__li{
+        &:hover{
+          background: rgba($level0-col2,0.5);
+        }
+      }
+    }
+
+    &--1{
+      //level specific
+      background-color: $level1-col1;
+      .banner__container{
+
+      }
+      .banner__logo{
+        &:before{
+          background-image: url(../assets/adult-ils/logo_img-level-1-2x.jpg);
+        }
+        &:after{
+          background-image: url(../assets/adult-ils/logo_number-level-1-2x.png);
+        }
+
+      }
+      .banner__nav__li{
+        &:hover{
+          background: rgba($level1-col2,0.5);
+        }
+      }
+    }
+    &--2{
+      //level specific
+      background-color: $level2-col1;
+      .banner__container{
+
+      }
+      .banner__logo{
+        &:before{
+          background-image: url(../assets/adult-ils/logo_img-level-2-2x.jpg);
+        }
+        &:after{
+          background-image: url(../assets/adult-ils/logo_number-level-2-2x.png);
+        }
+      }
+      .banner__nav__li{
+        &:hover{
+          background: rgba($level2-col2,0.5);
+        }
+      }
+
+    }
+    &--3{
+      //level specific
+      background-color: $level3-col1;
+      .banner__container{
+
+      }
+      .banner__logo{
+        &:before{
+          background-image: url(../assets/adult-ils/logo_img-level-3-2x.jpg);
+        }
+        &:after{
+          background-image: url(../assets/adult-ils/logo_number-level-3-2x.png);
+        }
+      }
+      .banner__nav__li{
+        &:hover{
+          background: rgba($level3-col2,0.5);
+        }
+    }
+
+    }
+    &--4{
+      //level specific
+      background-color: $level4-col1;
+      .banner__container{
+
+      }
+      .banner__logo{
+        &:before{
+          background-image: url(../assets/adult-ils/logo_img-level-4-2x.jpg);
+        }
+        &:after{
+          background-image: url(../assets/adult-ils/logo_number-level-4-2x.png);
+        }
+      }
+      .banner__nav__li{
+        &:hover{
+          background: rgba($level4-col2,0.5);
+        }
+    }
+
+    }
+  }
+}

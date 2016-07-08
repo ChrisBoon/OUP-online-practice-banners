@@ -1,0 +1,104 @@
+$ss-course-color-1: #ba72a7;
+$ss-level-1-color-1: $ss-course-color-1;
+$ss-level-2-color-1: #ed7a20;
+$ss-level-3-color-1: #7189be;
+$ss-level-4-color-1: #96c148;
+$ss-level-5-color-1: #de514a;
+
+.banner--ss{
+  .banner__container{
+
+  }
+  .banner__logo{
+    width: 158px;
+    background-size: 100%;
+
+  }
+  &.banner--course{
+    background-color: $ss-level-1-color-1;
+    background-image: url('../assets/primary-ss/banner-level-1-1x.png');
+    .banner__container{
+
+    }
+    .banner__logo{
+      background-image: url('../assets/primary-ss/logo-course-2x.png');
+    }
+  }
+  &.banner--level{
+    //all 'level' banners
+    .banner__logo{
+      position: relative;
+      cursor: pointer;
+      &::before{
+        position: absolute;
+        display: block;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../assets/primary-ss/logo-level-pseudo-hover.png');
+        background-size: 100%;
+        opacity: 0;
+        transform: scale(0.8);
+        transition: all 0.3s;
+      }
+      &:hover{
+        &::before{
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+    &--1{
+      background-color: $ss-level-1-color-1;
+      background-image: url('../assets/primary-ss/banner-level-1-1x.png');
+      .banner__container{
+
+      }
+      .banner__logo{
+        background-image: url('../assets/primary-ss/logo-level-1-2x.png');
+      }
+    }
+    &--2{
+      background-color: $ss-level-2-color-1;
+      background-image: url('../assets/primary-ss/banner-level-2-1x.png');
+      .banner__container{
+
+      }
+      .banner__logo{
+        background-image: url('../assets/primary-ss/logo-level-2-2x.png');
+      }
+    }
+    &--3{
+      background-color: $ss-level-3-color-1;
+      background-image: url('../assets/primary-ss/banner-level-3-1x.png');
+      .banner__container{
+
+      }
+      .banner__logo{
+        background-image: url('../assets/primary-ss/logo-level-3-2x.png');
+      }
+    }
+    &--4{
+      background-color: $ss-level-4-color-1;
+      background-image: url('../assets/primary-ss/banner-level-4-1x.png');
+      .banner__container{
+
+      }
+      .banner__logo{
+        background-image: url('../assets/primary-ss/logo-level-4-2x.png');
+      }
+    }
+    &--5{
+      background-color: $ss-level-5-color-1;
+      background-image: url('../assets/primary-ss/banner-level-5-1x.png');
+      .banner__container{
+
+      }
+      .banner__logo{
+        background-image: url('../assets/primary-ss/logo-level-5-2x.png');
+      }
+    }
+  }
+}

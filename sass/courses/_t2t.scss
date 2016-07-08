@@ -1,0 +1,103 @@
+$t2t-course-color-1: rgb(214,124,28); 
+$t2t-course-color-2: rgb(99,73,147); 
+$t2t-level-1-color-1: rgb(0,138,207); 
+$t2t-level-1-color-2: $t2t-course-color-1;
+$t2t-level-2-color-1: rgb(175,29,31);
+$t2t-level-2-color-2: rgb(106,169,66);
+$t2t-level-3-color-1: rgb(241,203,19);
+$t2t-level-3-color-2: $t2t-course-color-2;
+$t2t-level-4-color-1: $t2t-level-2-color-2;
+$t2t-level-4-color-2: $t2t-level-1-color-1;
+
+.banner--t2t{
+  background-position: 50%;
+  background-repeat: no-repeat;
+  .banner__container{
+
+  }
+  .banner__logo{
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  &.banner--course{
+    background-image: url('../assets/primary-t2t/banner-course-1x.jpg'),
+                      url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNkNjdjMWMiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiM2MzQ5OTMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+
+    background-image: url('../assets/primary-t2t/banner-course-1x.jpg'),
+                      linear-gradient(to right, $t2t-course-color-1 50%, $t2t-course-color-2 50%);
+    .banner__container{
+    }
+    .banner__logo{
+        background-image: url('../assets/primary-t2t/logo-course-2x.png');
+        width: 202px;
+    }
+  }
+  &.banner--level{
+    //all 'level' banners
+    .banner__logo{
+      background-position: 0 0;
+      cursor: pointer;
+
+      &:hover{
+        background-position: 0 100%;
+      }
+    }
+    &--1{
+      background-image: url('../assets/primary-t2t/banner-level-1-1x.jpg'),
+                        url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMwMDhhY2YiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNkNjdjMWMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+
+      background-image: url('../assets/primary-t2t/banner-level-1-1x.jpg'),
+                        linear-gradient(to right, $t2t-level-1-color-1 50%, $t2t-level-1-color-2 50%);
+      .banner__container{
+
+      }
+      .banner__logo{
+        background-image: url('../assets/primary-t2t/logo-level-1-2x.png');
+        width: 255px;
+      }
+    }
+    &--2{
+      background-image: url('../assets/primary-t2t/banner-level-2-1x.jpg'),
+                        url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNhZjFkMWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiM2YWE5NDIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+
+
+      background-image: url('../assets/primary-t2t/banner-level-2-1x.jpg'),
+                        linear-gradient(to right, $t2t-level-2-color-1 50%, $t2t-level-2-color-2 50%);
+      .banner__container{
+
+      }
+      .banner__logo{
+        background-image: url('../assets/primary-t2t/logo-level-2-2x.png');
+        width: 255px;
+      }
+    }
+    &--3{
+      background-image: url('../assets/primary-t2t/banner-level-3-1x.jpg'),
+                        url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNmMWNiMTMiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiM2MzQ5OTMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+
+      background-image: url('../assets/primary-t2t/banner-level-3-1x.jpg'),
+                        linear-gradient(to right, $t2t-level-3-color-1 50%, $t2t-level-3-color-2 50%);
+      .banner__container{
+
+      }
+      .banner__logo{
+        background-image: url('../assets/primary-t2t/logo-level-3-2x.png');
+        width: 277px;
+      }
+    }
+    &--4{
+      background-image: url('../assets/primary-t2t/banner-level-4-1x.jpg'),
+                        url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiM2YWE5NDIiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMwMDhhY2YiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+
+      background-image: url('../assets/primary-t2t/banner-level-4-1x.jpg'),
+                        linear-gradient(to right, $t2t-level-4-color-1 50%, $t2t-level-4-color-2 50%);
+      .banner__container{
+
+      }
+      .banner__logo{
+        background-image: url('../assets/primary-t2t/logo-level-4-2x.png');
+        width: 263px;
+      }
+    }
+  }
+}
