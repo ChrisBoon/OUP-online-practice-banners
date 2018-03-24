@@ -1,0 +1,128 @@
+@keyframes faf2e-bg-animation {
+  from {
+    background-position: 0 0; 
+  }
+
+  to {
+    background-position: 1000px 0; 
+  } 
+}
+
+$level-0-color: #c83d96;
+$level-1-color: #20c4f4;
+// $level-2-color: #f15b40;
+$level-2-color: #F34C2E;
+// $level-3-color: #5dbc68;
+$level-3-color: #43C352;
+// $level-4-color: #f99d1c;
+$level-4-color: #FF9F18;
+// $level-5-color: #a069ac;
+$level-5-color: #944DA3;
+// $level-6-color: #49c0b6;
+$level-6-color: #39C5B9;
+
+.banner--faf2e-ksa{
+  position: relative;
+  &:before{
+    position: absolute;
+    display: block;
+    content: "";
+    z-index: -1;
+    left: 0;right: 0;bottom: 0; top: 0;
+    background-image: url('../assets/primary-faf2e-ksa/banner-circles-static.png');
+  }
+  background: url('../assets/primary-faf2e-ksa/banner-circles-motion.png');
+  animation: faf2e-bg-animation 100s linear infinite;
+  .banner__container{
+
+  }
+  .banner__logo{
+    background-size:100%;
+    background-repeat: no-repeat;
+  }
+  &.banner--course{
+    &:before{background-color: $level-1-color;}
+    .banner__container{
+    }
+    .banner__logo{
+      width: 139px;
+      background-image: url(../assets/primary-faf2e-ksa/logo-course-2x.png);
+
+    }
+  }
+  &.banner--level{
+    .banner__logo{
+      width: 139px;
+      transform-origin: top left;
+      &:hover{
+        cursor: pointer;
+        @include transitionAll;
+        transform: scale(1.05);
+      }
+    }
+    &--0{
+      &:before{background-color: $level-0-color;}
+      .banner__container{
+
+      }
+      .banner__logo{
+        width: 99px;
+        background-image: url(../assets/primary-faf2e-ksa/logo-level-0-2x.png);
+      }
+    }
+    &--1{
+      &:before{background-color: $level-1-color;}
+      .banner__container{
+
+      }
+      .banner__logo{
+        background-image: url(../assets/primary-faf2e-ksa/logo-level-1-2x.png);
+      }
+    }
+    &--2{
+      &:before{background-color: $level-2-color;}
+      .banner__container{
+
+      }
+      .banner__logo{
+        background-image: url(../assets/primary-faf2e-ksa/logo-level-2-2x.png);
+      }
+    }
+    &--3{
+      &:before{background-color: $level-3-color;}
+      .banner__container{
+
+      }
+      .banner__logo{
+        background-image: url(../assets/primary-faf2e-ksa/logo-level-3-2x.png);
+      }
+    }
+    &--4{
+      &:before{background-color: $level-4-color;}
+      .banner__container{
+
+      }
+      .banner__logo{
+        background-image: url(../assets/primary-faf2e-ksa/logo-level-4-2x.png);
+      }
+    }
+    &--5{
+      &:before{background-color: $level-5-color;}
+      .banner__container{
+
+      }
+      .banner__logo{
+        background-image: url(../assets/primary-faf2e-ksa/logo-level-5-2x.png);
+      }
+    }
+    &--6{
+      &:before{background-color: $level-6-color;}
+      .banner__container{
+
+      }
+      .banner__logo{
+        background-image: url(../assets/primary-faf2e-ksa/logo-level-6-2x.png);
+      }
+    }
+  }
+}

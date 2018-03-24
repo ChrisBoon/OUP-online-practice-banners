@@ -1,0 +1,98 @@
+@import '../base/_helpers';
+
+$crsAbb: cegep;
+$crsMarket: adult;
+$assetFolder: '../assets/#{$crsMarket}-#{$crsAbb}';
+
+$bgCrs1: #229ed9;
+$bgCrs2: #37a9e0;
+$bgL1: #5d4998;
+$bgL2: #fbae17;
+$hoverL1: rgb(235,103,32);
+$hoverL2: rgb(226,0,59);
+
+
+.zzz-#{$crsAbb}{
+
+  //all banners:
+  .container{
+    background-image: url('#{$assetFolder}/banner-course.svg'),
+                linear-gradient(to right, $bgCrs1 50%, $bgCrs2 50%);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+  // all #header elements
+  #header{
+    width: 100%;
+    max-width: 768px;
+  }
+
+  #header>a{
+    margin-left: 10px;
+    position: relative;
+    width: 350px;
+    background-repeat: no-repeat;
+    background-size: 350px;
+    background-image: url('#{$assetFolder}/logo-course.svg');
+    transform-origin: center;
+  }
+  
+  #headBtn li{
+    &.disabled{
+      background: rgba( $hoverL1 ,1);
+    }
+    &:hover{
+      background: rgba( $hoverL1 ,1);
+    }
+  }
+
+  //level banners
+  .b_#{$crsAbb}1,
+  .b_#{$crsAbb}3 {
+    .container{
+      background: $bgL1 url('#{$assetFolder}/banner-level-1.svg') center center no-repeat;
+    } 
+
+    #headBtn li{
+      &.disabled{
+        background: rgba( $hoverL1 ,1);
+      }
+      &:hover{
+        background: rgba( $hoverL1 ,1);
+      }
+    }        
+  }
+
+  .b_#{$crsAbb}2,
+  .b_#{$crsAbb}4 {
+    .container{
+      background: $bgL2 url('#{$assetFolder}/banner-level-2.svg') center center no-repeat;
+    } 
+
+    #headBtn li{
+      &.disabled{
+        background: rgba( $hoverL2 ,1);
+      }
+      &:hover{
+        background: rgba( $hoverL2 ,1);
+      }
+    }        
+  }
+
+  //logos
+  @for $i from 1 through 4{
+    .b_#{$crsAbb}#{$i} {
+      #header>a{
+        background-image: url('#{$assetFolder}/logo-level-#{$i}.svg');
+        cursor: pointer;
+        &:hover{
+          transform: scale(1.05);
+        }        
+      }
+    }
+  }
+
+
+}

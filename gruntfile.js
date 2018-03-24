@@ -13,6 +13,15 @@ module.exports = function(grunt) {
                     ext: '.html'
                 }]
             },
+            stage: {
+                files: [{
+                    expand: true,
+                    src: ['kit/*.kit'],
+                    dest: 'stage/sample/',
+                    flatten: true,
+                    ext: '.html'
+                }]
+            }
         },
         sass: {
             build: {
@@ -23,6 +32,19 @@ module.exports = function(grunt) {
                     expand: true,
                     src: ['sass/*.scss'],
                     dest: 'css',
+                    flatten: true,
+                    ext: '.css'
+                }]
+            },
+            stage: {
+                options: {
+                    style: 'expanded',
+                    sourcemap: 'none'
+                },
+                files: [{
+                    expand: true,
+                    src: ['sass/*.scss'],
+                    dest: 'stage/css',
                     flatten: true,
                     ext: '.css'
                 }]
@@ -51,6 +73,9 @@ module.exports = function(grunt) {
             build: {
                 src: 'css/screen.css'
             },
+            stage: {
+                src: 'stage/*.css'
+            },
             dist: {
                 src: 'VST/*.css'
             }
@@ -64,6 +89,13 @@ module.exports = function(grunt) {
                 options: {
                     port: 9001,
                     keepalive: true
+                }
+            },
+            stage: {
+                options: {
+                    port: 9001,
+                    keepalive: true,
+                    base: 'stage'
                 }
             }
 
@@ -87,7 +119,14 @@ module.exports = function(grunt) {
             }
         },
         imagemin: { 
-            img: {
+            stage: {
+              files: [{
+                expand: true,
+                src: ['assets/**/*.{png,jpg,gif,svg}'], 
+                dest: 'stage/'
+              }]
+            },
+            dist: {
               files: [{
                 expand: true,
                 src: ['assets/**/*.{png,jpg,gif,svg}'], 
@@ -109,6 +148,14 @@ module.exports = function(grunt) {
             }
             ]
           }
+        },
+        copy: {
+            stage: {
+                files: [
+                  // includes files within path
+                      {expand: true, src: ['img/*','scripts/**'], dest: 'stage/'}
+                ],
+            },
         }
 
     });
@@ -122,9 +169,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-codekit');
     grunt.loadNpmTasks('grunt-text-replace');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-newer');
+
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default', [
-        'codekit',
+        'codekit:build',
         'sass:build',
         'postcss:build',
         'connect:build'
@@ -132,11 +182,19 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('dist', [
-        'imagemin',
+        'newer:imagemin:dist',
         'sass:dist',
         'postcss:dist',
         'cssbeautifier',
         'replace'
+    ]);
+
+    grunt.registerTask('stage', [
+        'codekit:stage',
+        'newer:imagemin:stage',
+        'sass:stage',
+        'newer:copy:stage',
+        'connect:stage'
     ]);
 
 

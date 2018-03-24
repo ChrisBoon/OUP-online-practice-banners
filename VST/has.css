@@ -1,0 +1,147 @@
+.container {
+    background-color: #313e5e;
+    background: url("../images/banners/banner-course.jpg") center center no-repeat, linear-gradient(to right, #313e5e 50%, #4c749c 50%);
+    position: relative;
+}
+
+.b_hasrw0 .container, .b_hasrw1 .container, .b_hasrw2 .container, .b_hasrw3 .container {
+    background-image: none;
+    background-color: #222d45;
+}
+
+.b_hasls0 .container, .b_hasls1 .container, .b_hasls2 .container, .b_hasls3 .container {
+    background-image: none;
+    background-color: #406f9e;
+}
+
+.b_hasrw0 .container:before, .b_hasrw1 .container:before, .b_hasrw2 .container:before, .b_hasrw3 .container:before, .b_hasls0 .container:before, .b_hasls1 .container:before, .b_hasls2 .container:before, .b_hasls3 .container:before {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 70px;
+    right: calc(50% + 376px);
+    background-size: 388px;
+    width: 388px;
+}
+
+.b_hasrw0 #header > a, .b_hasrw1 #header > a, .b_hasrw2 #header > a, .b_hasrw3 #header > a, .b_hasls0 #header > a, .b_hasls1 #header > a, .b_hasls2 #header > a, .b_hasls3 #header > a {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.b_hasrw0 #header > a:hover, .b_hasrw1 #header > a:hover, .b_hasrw2 #header > a:hover, .b_hasrw3 #header > a:hover, .b_hasls0 #header > a:hover, .b_hasls1 #header > a:hover, .b_hasls2 #header > a:hover, .b_hasls3 #header > a:hover {
+    -webkit-transform: translateZ(0) scale(1.05);
+    transform: translateZ(0) scale(1.05);
+    cursor: pointer;
+}
+
+#header {
+    width: 100%;
+    max-width: 768px;
+}
+
+#header > a {
+    margin-left: 10px;
+    position: relative;
+    width: 350px;
+    background-repeat: no-repeat;
+    background-size: 350px;
+    background-position: 50% 13px;
+    background-image: url("../images/banners/logo-course.png");
+    -webkit-transform-origin: center left;
+    -ms-transform-origin: center left;
+    transform-origin: center left;
+}
+
+#headBtn li.disabled {
+    background: rgba(34, 45, 69, 0.8);
+}
+
+#headBtn li:hover {
+    background: rgba(34, 45, 69, 0.6);
+}
+
+.b_hasrw0 #headBtn li.disabled, .b_hasrw1 #headBtn li.disabled, .b_hasrw2 #headBtn li.disabled, .b_hasrw3 #headBtn li.disabled {
+    background: rgba(64, 111, 158, 0.8);
+}
+
+.b_hasrw0 #headBtn li:hover, .b_hasrw1 #headBtn li:hover, .b_hasrw2 #headBtn li:hover, .b_hasrw3 #headBtn li:hover {
+    background: rgba(64, 111, 158, 0.6);
+}
+
+.b_hasls0 .container:before {
+    background-image: url("../images/banners/banner-level-ls0.png");
+}
+
+.b_hasls0 #header > a {
+    background-image: url("../images/banners/logo-level-ls0.png");
+}
+
+.b_hasls1 .container:before {
+    background-image: url("../images/banners/banner-level-ls1.png");
+}
+
+.b_hasls1 #header > a {
+    background-image: url("../images/banners/logo-level-ls1.png");
+    width: 300px;
+    background-size: 300px;
+}
+
+.b_hasls2 .container:before {
+    background-image: url("../images/banners/banner-level-ls2.png");
+}
+
+.b_hasls2 #header > a {
+    background-image: url("../images/banners/logo-level-ls2.png");
+    width: 300px;
+    background-size: 300px;
+}
+
+.b_hasls3 .container:before {
+    background-image: url("../images/banners/banner-level-ls3.png");
+}
+
+.b_hasls3 #header > a {
+    background-image: url("../images/banners/logo-level-ls3.png");
+    width: 300px;
+    background-size: 300px;
+}
+
+.b_hasrw0 .container:before {
+    background-image: url("../images/banners/banner-level-rw0.png");
+}
+
+.b_hasrw0 #header > a {
+    background-image: url("../images/banners/logo-level-rw0.png");
+}
+
+.b_hasrw1 .container:before {
+    background-image: url("../images/banners/banner-level-rw1.png");
+}
+
+.b_hasrw1 #header > a {
+    background-image: url("../images/banners/logo-level-rw1.png");
+    width: 300px;
+    background-size: 300px;
+}
+
+.b_hasrw2 .container:before {
+    background-image: url("../images/banners/banner-level-rw2.png");
+}
+
+.b_hasrw2 #header > a {
+    background-image: url("../images/banners/logo-level-rw2.png");
+    width: 300px;
+    background-size: 300px;
+}
+
+.b_hasrw3 .container:before {
+    background-image: url("../images/banners/banner-level-rw3.png");
+}
+
+.b_hasrw3 #header > a {
+    background-image: url("../images/banners/logo-level-rw3.png");
+    width: 300px;
+    background-size: 300px;
+}
+

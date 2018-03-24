@@ -1,0 +1,95 @@
+@import '../base/_helpers';
+
+$level:(
+  level1: #f7de00,
+  level2: #ffcb00,
+  level3: #008cb4,
+  level4: #007bc5,
+  course: #ffc700
+);
+$levelAlt:(
+  level1: #006c2d,
+  level2: #bf3f4a,
+  level3: #ff9a00,
+  level4: #19235c,
+  course: #be8c21
+);
+
+.zzz-hpse{
+
+  .container{
+    background-color: map-get($level, course);
+    padding-left: 16px;
+    background: url('../assets/adult-hpse/banner-course.jpg') center center no-repeat, linear-gradient(to right, map-get($level, course) 50%, map-get($levelAlt, course) 50%);
+  }
+  #header{
+    width: 100%;
+    max-width: 768px;
+  }
+
+  #header>a{
+    position: relative;
+    width: 350px;
+    background-repeat: no-repeat;
+    background-size: 290px;
+    background-position: center right;
+    background-image: url('../assets/adult-hpse/logo-course-2x.png');
+    &:before{
+      position: absolute;
+      content: "";
+      display: block;
+      width: 65px;
+      height: 70px;
+      background-image: url('../assets/adult-hpse/logo-course-psuedo.png');
+      background-repeat: no-repeat;
+      top: 0;
+      left: 0;
+    }
+  }
+  #headBtn li{
+    &.disabled{
+      background: rgba( darken( map-get($level, course) ,20) ,0.8);
+    }
+    &:hover{
+      background: rgba( darken( map-get($level, course) ,20) ,0.6);
+    }
+  }
+  .b_hpse1,
+  .b_hpse2,
+  .b_hpse3,
+  .b_hpse4{
+    #header>a{
+      cursor: pointer;
+      &:before{
+        transition: transform 0.2s;
+      }
+      &:hover{
+        &:before{
+          transform:translate(40%);
+        }
+      }
+    }
+  }
+  @for $i from 1 through 4{
+    .b_hpse#{$i}{
+      .container{
+        background: url('../assets/adult-hpse/banner-level-#{$i}.jpg') center center no-repeat, linear-gradient( to right, map-get($level, level#{$i}) 50%, map-get($levelAlt, level#{$i}) 50%);;
+      }
+      #header>a{
+        background-image: url('../assets/adult-hpse/logo-level-#{$i}-2x.png');
+
+        &:before{
+          background-image: url('../assets/adult-hpse/logo-level-#{$i}-psuedo.png');
+        }
+      }
+      #headBtn li:hover{
+        @if $i == 2{
+          background: rgba( darken( map-get($levelAlt, level#{$i}) ,24) ,0.6);
+        }
+        @else{
+          background: rgba( darken( map-get($levelAlt, level#{$i}) ,10) ,0.6);
+        }
+      }
+    }
+  }
+}

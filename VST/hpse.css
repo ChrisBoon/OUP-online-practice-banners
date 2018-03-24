@@ -1,0 +1,129 @@
+.container {
+    background-color: #ffc700;
+    padding-left: 16px;
+    background: url("../images/banners/banner-course.jpg") center center no-repeat, linear-gradient(to right, #ffc700 50%, #be8c21 50%);
+}
+
+#header {
+    width: 100%;
+    max-width: 768px;
+}
+
+#header > a {
+    position: relative;
+    width: 350px;
+    background-repeat: no-repeat;
+    background-size: 290px;
+    background-position: center right;
+    background-image: url("../images/banners/logo-course-2x.png");
+}
+
+#header > a:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 65px;
+    height: 70px;
+    background-image: url("../images/banners/logo-course-psuedo.png");
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+}
+
+#headBtn li.disabled {
+    background: rgba(153, 119, 0, 0.8);
+}
+
+#headBtn li:hover {
+    background: rgba(153, 119, 0, 0.6);
+}
+
+.b_hpse1 #header > a,
+.b_hpse2 #header > a,
+.b_hpse3 #header > a,
+.b_hpse4 #header > a {
+    cursor: pointer;
+}
+
+.b_hpse1 #header > a:before,
+.b_hpse2 #header > a:before,
+.b_hpse3 #header > a:before,
+.b_hpse4 #header > a:before {
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.b_hpse1 #header > a:hover:before,
+.b_hpse2 #header > a:hover:before,
+.b_hpse3 #header > a:hover:before,
+.b_hpse4 #header > a:hover:before {
+    -webkit-transform: translate(40%);
+    -ms-transform: translate(40%);
+    transform: translate(40%);
+}
+
+.b_hpse1 .container {
+    background: url("../images/banners/banner-level-1.jpg") center center no-repeat, linear-gradient(to right, #f7de00 50%, #006c2d 50%);
+}
+
+.b_hpse1 #header > a {
+    background-image: url("../images/banners/logo-level-1-2x.png");
+}
+
+.b_hpse1 #header > a:before {
+    background-image: url("../images/banners/logo-level-1-psuedo.png");
+}
+
+.b_hpse1 #headBtn li:hover {
+    background: rgba(0, 57, 24, 0.6);
+}
+
+.b_hpse2 .container {
+    background: url("../images/banners/banner-level-2.jpg") center center no-repeat, linear-gradient(to right, #ffcb00 50%, #bf3f4a 50%);
+}
+
+.b_hpse2 #header > a {
+    background-image: url("../images/banners/logo-level-2-2x.png");
+}
+
+.b_hpse2 #header > a:before {
+    background-image: url("../images/banners/logo-level-2-psuedo.png");
+}
+
+.b_hpse2 #headBtn li:hover {
+    background: rgba(99, 33, 38, 0.6);
+}
+
+.b_hpse3 .container {
+    background: url("../images/banners/banner-level-3.jpg") center center no-repeat, linear-gradient(to right, #008cb4 50%, #ff9a00 50%);
+}
+
+.b_hpse3 #header > a {
+    background-image: url("../images/banners/logo-level-3-2x.png");
+}
+
+.b_hpse3 #header > a:before {
+    background-image: url("../images/banners/logo-level-3-psuedo.png");
+}
+
+.b_hpse3 #headBtn li:hover {
+    background: rgba(204, 123, 0, 0.6);
+}
+
+.b_hpse4 .container {
+    background: url("../images/banners/banner-level-4.jpg") center center no-repeat, linear-gradient(to right, #007bc5 50%, #19235c 50%);
+}
+
+.b_hpse4 #header > a {
+    background-image: url("../images/banners/logo-level-4-2x.png");
+}
+
+.b_hpse4 #header > a:before {
+    background-image: url("../images/banners/logo-level-4-psuedo.png");
+}
+
+.b_hpse4 #headBtn li:hover {
+    background: rgba(14, 20, 52, 0.6);
+}
+

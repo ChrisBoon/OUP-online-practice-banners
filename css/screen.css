@@ -238,6 +238,7 @@ a {
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
   font-size: 14px;
+  overflow: auto;
 }
 .page-changelog h2 {
   font-weight: 600;
@@ -806,6 +807,99 @@ a {
 }
 .banner--faf2e.banner--level--6 .banner__logo {
   background-image: url(../assets/primary-faf2e/logo-level-6-2x.png);
+}
+
+@keyframes faf2e-bg-animation {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 1000px 0;
+  }
+}
+.banner--faf2e-ksa {
+  position: relative;
+  background: url("../assets/primary-faf2e-ksa/banner-circles-motion.png");
+  -webkit-animation: faf2e-bg-animation 100s linear infinite;
+          animation: faf2e-bg-animation 100s linear infinite;
+}
+.banner--faf2e-ksa:before {
+  position: absolute;
+  display: block;
+  content: "";
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-image: url("../assets/primary-faf2e-ksa/banner-circles-static.png");
+}
+.banner--faf2e-ksa .banner__logo {
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.banner--faf2e-ksa.banner--course:before {
+  background-color: #20c4f4;
+}
+.banner--faf2e-ksa.banner--course .banner__logo {
+  width: 139px;
+  background-image: url(../assets/primary-faf2e-ksa/logo-course-2x.png);
+}
+.banner--faf2e-ksa.banner--level .banner__logo {
+  width: 139px;
+  -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+          transform-origin: top left;
+}
+.banner--faf2e-ksa.banner--level .banner__logo:hover {
+  cursor: pointer;
+  transition: all 0.2s;
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.banner--faf2e-ksa.banner--level--0:before {
+  background-color: #c83d96;
+}
+.banner--faf2e-ksa.banner--level--0 .banner__logo {
+  width: 99px;
+  background-image: url(../assets/primary-faf2e-ksa/logo-level-0-2x.png);
+}
+.banner--faf2e-ksa.banner--level--1:before {
+  background-color: #20c4f4;
+}
+.banner--faf2e-ksa.banner--level--1 .banner__logo {
+  background-image: url(../assets/primary-faf2e-ksa/logo-level-1-2x.png);
+}
+.banner--faf2e-ksa.banner--level--2:before {
+  background-color: #F34C2E;
+}
+.banner--faf2e-ksa.banner--level--2 .banner__logo {
+  background-image: url(../assets/primary-faf2e-ksa/logo-level-2-2x.png);
+}
+.banner--faf2e-ksa.banner--level--3:before {
+  background-color: #43C352;
+}
+.banner--faf2e-ksa.banner--level--3 .banner__logo {
+  background-image: url(../assets/primary-faf2e-ksa/logo-level-3-2x.png);
+}
+.banner--faf2e-ksa.banner--level--4:before {
+  background-color: #FF9F18;
+}
+.banner--faf2e-ksa.banner--level--4 .banner__logo {
+  background-image: url(../assets/primary-faf2e-ksa/logo-level-4-2x.png);
+}
+.banner--faf2e-ksa.banner--level--5:before {
+  background-color: #944DA3;
+}
+.banner--faf2e-ksa.banner--level--5 .banner__logo {
+  background-image: url(../assets/primary-faf2e-ksa/logo-level-5-2x.png);
+}
+.banner--faf2e-ksa.banner--level--6:before {
+  background-color: #39C5B9;
+}
+.banner--faf2e-ksa.banner--level--6 .banner__logo {
+  background-image: url(../assets/primary-faf2e-ksa/logo-level-6-2x.png);
 }
 
 .banner__container:after, .banner__nav__ul:after, .vst-primary #header:after, .vst-adult #header:after {
@@ -2065,6 +2159,336 @@ a {
 }
 .zzz-sc3e .b_sc3e3 #headBtn li:hover {
   background: rgba(79, 40, 87, 0.6);
+}
+
+.banner__container:after, .banner__nav__ul:after, .vst-primary #header:after, .vst-adult #header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.zzz-hpse .container {
+  background-color: #ffc700;
+  padding-left: 16px;
+  background: url("../assets/adult-hpse/banner-course.jpg") center center no-repeat, linear-gradient(to right, #ffc700 50%, #be8c21 50%);
+}
+.zzz-hpse #header {
+  width: 100%;
+  max-width: 768px;
+}
+.zzz-hpse #header > a {
+  position: relative;
+  width: 350px;
+  background-repeat: no-repeat;
+  background-size: 290px;
+  background-position: center right;
+  background-image: url("../assets/adult-hpse/logo-course-2x.png");
+}
+.zzz-hpse #header > a:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 65px;
+  height: 70px;
+  background-image: url("../assets/adult-hpse/logo-course-psuedo.png");
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+}
+.zzz-hpse #headBtn li.disabled {
+  background: rgba(153, 119, 0, 0.8);
+}
+.zzz-hpse #headBtn li:hover {
+  background: rgba(153, 119, 0, 0.6);
+}
+.zzz-hpse .b_hpse1 #header > a,
+.zzz-hpse .b_hpse2 #header > a,
+.zzz-hpse .b_hpse3 #header > a,
+.zzz-hpse .b_hpse4 #header > a {
+  cursor: pointer;
+}
+.zzz-hpse .b_hpse1 #header > a:before,
+.zzz-hpse .b_hpse2 #header > a:before,
+.zzz-hpse .b_hpse3 #header > a:before,
+.zzz-hpse .b_hpse4 #header > a:before {
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+.zzz-hpse .b_hpse1 #header > a:hover:before,
+.zzz-hpse .b_hpse2 #header > a:hover:before,
+.zzz-hpse .b_hpse3 #header > a:hover:before,
+.zzz-hpse .b_hpse4 #header > a:hover:before {
+  -webkit-transform: translate(40%);
+      -ms-transform: translate(40%);
+          transform: translate(40%);
+}
+.zzz-hpse .b_hpse1 .container {
+  background: url("../assets/adult-hpse/banner-level-1.jpg") center center no-repeat, linear-gradient(to right, #f7de00 50%, #006c2d 50%);
+}
+.zzz-hpse .b_hpse1 #header > a {
+  background-image: url("../assets/adult-hpse/logo-level-1-2x.png");
+}
+.zzz-hpse .b_hpse1 #header > a:before {
+  background-image: url("../assets/adult-hpse/logo-level-1-psuedo.png");
+}
+.zzz-hpse .b_hpse1 #headBtn li:hover {
+  background: rgba(0, 57, 24, 0.6);
+}
+.zzz-hpse .b_hpse2 .container {
+  background: url("../assets/adult-hpse/banner-level-2.jpg") center center no-repeat, linear-gradient(to right, #ffcb00 50%, #bf3f4a 50%);
+}
+.zzz-hpse .b_hpse2 #header > a {
+  background-image: url("../assets/adult-hpse/logo-level-2-2x.png");
+}
+.zzz-hpse .b_hpse2 #header > a:before {
+  background-image: url("../assets/adult-hpse/logo-level-2-psuedo.png");
+}
+.zzz-hpse .b_hpse2 #headBtn li:hover {
+  background: rgba(99, 33, 38, 0.6);
+}
+.zzz-hpse .b_hpse3 .container {
+  background: url("../assets/adult-hpse/banner-level-3.jpg") center center no-repeat, linear-gradient(to right, #008cb4 50%, #ff9a00 50%);
+}
+.zzz-hpse .b_hpse3 #header > a {
+  background-image: url("../assets/adult-hpse/logo-level-3-2x.png");
+}
+.zzz-hpse .b_hpse3 #header > a:before {
+  background-image: url("../assets/adult-hpse/logo-level-3-psuedo.png");
+}
+.zzz-hpse .b_hpse3 #headBtn li:hover {
+  background: rgba(204, 123, 0, 0.6);
+}
+.zzz-hpse .b_hpse4 .container {
+  background: url("../assets/adult-hpse/banner-level-4.jpg") center center no-repeat, linear-gradient(to right, #007bc5 50%, #19235c 50%);
+}
+.zzz-hpse .b_hpse4 #header > a {
+  background-image: url("../assets/adult-hpse/logo-level-4-2x.png");
+}
+.zzz-hpse .b_hpse4 #header > a:before {
+  background-image: url("../assets/adult-hpse/logo-level-4-psuedo.png");
+}
+.zzz-hpse .b_hpse4 #headBtn li:hover {
+  background: rgba(14, 20, 52, 0.6);
+}
+
+.banner__container:after, .banner__nav__ul:after, .vst-primary #header:after, .vst-adult #header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.zzz-has .container {
+  background-color: #313e5e;
+  background: url("../assets/adult-has/banner-course.jpg") center center no-repeat, linear-gradient(to right, #313e5e 50%, #4c749c 50%);
+  position: relative;
+}
+.zzz-has .b_hasrw0 .container, .zzz-has .b_hasrw1 .container, .zzz-has .b_hasrw2 .container, .zzz-has .b_hasrw3 .container {
+  background-image: none;
+  background-color: #222d45;
+}
+.zzz-has .b_hasls0 .container, .zzz-has .b_hasls1 .container, .zzz-has .b_hasls2 .container, .zzz-has .b_hasls3 .container {
+  background-image: none;
+  background-color: #406f9e;
+}
+.zzz-has .b_hasrw0 .container:before, .zzz-has .b_hasrw1 .container:before, .zzz-has .b_hasrw2 .container:before, .zzz-has .b_hasrw3 .container:before, .zzz-has .b_hasls0 .container:before, .zzz-has .b_hasls1 .container:before, .zzz-has .b_hasls2 .container:before, .zzz-has .b_hasls3 .container:before {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 70px;
+  right: calc(50% + 376px);
+  background-size: 388px;
+  width: 388px;
+}
+.zzz-has .b_hasrw0 #header > a, .zzz-has .b_hasrw1 #header > a, .zzz-has .b_hasrw2 #header > a, .zzz-has .b_hasrw3 #header > a, .zzz-has .b_hasls0 #header > a, .zzz-has .b_hasls1 #header > a, .zzz-has .b_hasls2 #header > a, .zzz-has .b_hasls3 #header > a {
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+.zzz-has .b_hasrw0 #header > a:hover, .zzz-has .b_hasrw1 #header > a:hover, .zzz-has .b_hasrw2 #header > a:hover, .zzz-has .b_hasrw3 #header > a:hover, .zzz-has .b_hasls0 #header > a:hover, .zzz-has .b_hasls1 #header > a:hover, .zzz-has .b_hasls2 #header > a:hover, .zzz-has .b_hasls3 #header > a:hover {
+  -webkit-transform: translateZ(0) scale(1.05);
+          transform: translateZ(0) scale(1.05);
+  cursor: pointer;
+}
+.zzz-has #header {
+  width: 100%;
+  max-width: 768px;
+}
+.zzz-has #header > a {
+  margin-left: 10px;
+  position: relative;
+  width: 350px;
+  background-repeat: no-repeat;
+  background-size: 350px;
+  background-position: 50% 13px;
+  background-image: url("../assets/adult-has/logo-course.png");
+  -webkit-transform-origin: center left;
+      -ms-transform-origin: center left;
+          transform-origin: center left;
+}
+.zzz-has #headBtn li.disabled {
+  background: rgba(34, 45, 69, 0.8);
+}
+.zzz-has #headBtn li:hover {
+  background: rgba(34, 45, 69, 0.6);
+}
+.zzz-has .b_hasrw0 #headBtn li.disabled, .zzz-has .b_hasrw1 #headBtn li.disabled, .zzz-has .b_hasrw2 #headBtn li.disabled, .zzz-has .b_hasrw3 #headBtn li.disabled {
+  background: rgba(64, 111, 158, 0.8);
+}
+.zzz-has .b_hasrw0 #headBtn li:hover, .zzz-has .b_hasrw1 #headBtn li:hover, .zzz-has .b_hasrw2 #headBtn li:hover, .zzz-has .b_hasrw3 #headBtn li:hover {
+  background: rgba(64, 111, 158, 0.6);
+}
+.zzz-has .b_hasls0 .container:before {
+  background-image: url("../assets/adult-has/banner-level-ls0.png");
+}
+.zzz-has .b_hasls0 #header > a {
+  background-image: url("../assets/adult-has/logo-level-ls0.png");
+}
+.zzz-has .b_hasls1 .container:before {
+  background-image: url("../assets/adult-has/banner-level-ls1.png");
+}
+.zzz-has .b_hasls1 #header > a {
+  background-image: url("../assets/adult-has/logo-level-ls1.png");
+  width: 300px;
+  background-size: 300px;
+}
+.zzz-has .b_hasls2 .container:before {
+  background-image: url("../assets/adult-has/banner-level-ls2.png");
+}
+.zzz-has .b_hasls2 #header > a {
+  background-image: url("../assets/adult-has/logo-level-ls2.png");
+  width: 300px;
+  background-size: 300px;
+}
+.zzz-has .b_hasls3 .container:before {
+  background-image: url("../assets/adult-has/banner-level-ls3.png");
+}
+.zzz-has .b_hasls3 #header > a {
+  background-image: url("../assets/adult-has/logo-level-ls3.png");
+  width: 300px;
+  background-size: 300px;
+}
+.zzz-has .b_hasrw0 .container:before {
+  background-image: url("../assets/adult-has/banner-level-rw0.png");
+}
+.zzz-has .b_hasrw0 #header > a {
+  background-image: url("../assets/adult-has/logo-level-rw0.png");
+}
+.zzz-has .b_hasrw1 .container:before {
+  background-image: url("../assets/adult-has/banner-level-rw1.png");
+}
+.zzz-has .b_hasrw1 #header > a {
+  background-image: url("../assets/adult-has/logo-level-rw1.png");
+  width: 300px;
+  background-size: 300px;
+}
+.zzz-has .b_hasrw2 .container:before {
+  background-image: url("../assets/adult-has/banner-level-rw2.png");
+}
+.zzz-has .b_hasrw2 #header > a {
+  background-image: url("../assets/adult-has/logo-level-rw2.png");
+  width: 300px;
+  background-size: 300px;
+}
+.zzz-has .b_hasrw3 .container:before {
+  background-image: url("../assets/adult-has/banner-level-rw3.png");
+}
+.zzz-has .b_hasrw3 #header > a {
+  background-image: url("../assets/adult-has/logo-level-rw3.png");
+  width: 300px;
+  background-size: 300px;
+}
+
+.banner__container:after, .banner__nav__ul:after, .vst-primary #header:after, .vst-adult #header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.zzz-cegep .container {
+  background-image: url("../assets/adult-cegep/banner-course.svg"), linear-gradient(to right, #229ed9 50%, #37a9e0 50%);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.zzz-cegep #header {
+  width: 100%;
+  max-width: 768px;
+}
+.zzz-cegep #header > a {
+  margin-left: 10px;
+  position: relative;
+  width: 350px;
+  background-repeat: no-repeat;
+  background-size: 350px;
+  background-image: url("../assets/adult-cegep/logo-course.svg");
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+}
+.zzz-cegep #headBtn li.disabled {
+  background: #eb6720;
+}
+.zzz-cegep #headBtn li:hover {
+  background: #eb6720;
+}
+.zzz-cegep .b_cegep1 .container,
+.zzz-cegep .b_cegep3 .container {
+  background: #5d4998 url("../assets/adult-cegep/banner-level-1.svg") center center no-repeat;
+}
+.zzz-cegep .b_cegep1 #headBtn li.disabled,
+.zzz-cegep .b_cegep3 #headBtn li.disabled {
+  background: #eb6720;
+}
+.zzz-cegep .b_cegep1 #headBtn li:hover,
+.zzz-cegep .b_cegep3 #headBtn li:hover {
+  background: #eb6720;
+}
+.zzz-cegep .b_cegep2 .container,
+.zzz-cegep .b_cegep4 .container {
+  background: #fbae17 url("../assets/adult-cegep/banner-level-2.svg") center center no-repeat;
+}
+.zzz-cegep .b_cegep2 #headBtn li.disabled,
+.zzz-cegep .b_cegep4 #headBtn li.disabled {
+  background: #e2003b;
+}
+.zzz-cegep .b_cegep2 #headBtn li:hover,
+.zzz-cegep .b_cegep4 #headBtn li:hover {
+  background: #e2003b;
+}
+.zzz-cegep .b_cegep1 #header > a {
+  background-image: url("../assets/adult-cegep/logo-level-1.svg");
+  cursor: pointer;
+}
+.zzz-cegep .b_cegep1 #header > a:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.zzz-cegep .b_cegep2 #header > a {
+  background-image: url("../assets/adult-cegep/logo-level-2.svg");
+  cursor: pointer;
+}
+.zzz-cegep .b_cegep2 #header > a:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.zzz-cegep .b_cegep3 #header > a {
+  background-image: url("../assets/adult-cegep/logo-level-3.svg");
+  cursor: pointer;
+}
+.zzz-cegep .b_cegep3 #header > a:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.zzz-cegep .b_cegep4 #header > a {
+  background-image: url("../assets/adult-cegep/logo-level-4.svg");
+  cursor: pointer;
+}
+.zzz-cegep .b_cegep4 #header > a:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 body {
